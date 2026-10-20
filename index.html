@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3f5f3">
+  <meta name="description" content="随机抽一个小问题，留 15 分钟查阅、理解与归纳。六类知识题库，无需注册。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="拾知">
+  <meta name="referrer" content="no-referrer">
+  <title>拾知 · 15 分钟知识抽签</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./library.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="./" class="brand" aria-label="拾知首页">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M14 7C10 4 6 5 3 6v16c4-2 7-2 11 0 4-2 7-2 11 0V6c-3-1-7-2-11 1Zm0 0v15"/></svg>
+        <span>拾知<span class="brand-sub">15 分钟知识抽签</span></span>
+      </a>
+      <button id="about-open" class="quiet" aria-haspopup="dialog">题库与使用</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <div class="page-title">
+      <div><h1>给好奇心，留一刻钟。</h1><p>随机遇见一个问题，带着理解回到生活。</p></div>
+      <span id="remaining" class="remaining"></span>
+    </div>
+
+    <div class="study-grid">
+      <article class="question-panel" aria-labelledby="card-heading">
+        <div id="welcome">
+          <div class="card-top"><span>六类知识 · 随机抽取</span><span>每次一个问题</span></div>
+          <h2 id="card-heading">今天，探索哪一个<br>小问题？</h2>
+          <p class="welcome-text">不用学完一个学科。<br>从一个具体的问题开始就好。</p>
+          <div class="category-cloud" aria-label="题库类别"><span>心理学</span><span>学习方法</span><span>沟通与关系</span><span>家庭教育</span><span>逻辑与判断</span><span>人文与社会</span></div>
+          <button id="draw-first" class="primary draw-button">抽取一个知识点 <span aria-hidden="true">↗</span></button>
+          <p class="card-footnote">完成的题目会自动避开，随时可以换一题。</p>
+        </div>
+
+        <div id="active-card" hidden>
+          <div class="card-top"><span id="card-category" class="category-name"></span><span id="card-state">本次学习问题</span></div>
+          <h2 id="topic-title" tabindex="-1"></h2>
+          <p id="topic-question" class="topic-question"></p>
+
+          <section class="research" aria-labelledby="research-title">
+            <h3 id="research-title">从这里查起</h3>
+            <div id="keywords" class="keywords"></div>
+            <p id="direction"></p>
+            <div class="search-links"><a id="search-baidu" target="_blank" rel="noopener noreferrer">百度查资料 <span aria-hidden="true">↗</span></a><a id="search-bing" target="_blank" rel="noopener noreferrer">必应查资料 <span aria-hidden="true">↗</span></a></div>
+            <details class="source-guide"><summary>优先查阅什么资料？</summary><p id="source-guide"></p><p>找到具体资料后，留意作者、研究方法、适用条件，以及有没有相反证据。</p></details>
+          </section>
+          <div class="card-actions"><button id="complete" class="secondary">标记已完成</button><button id="draw-next" class="text-button">换一题 <span aria-hidden="true">↻</span></button></div>
+          <button id="undo" class="text-button undo" hidden>撤销本题的完成标记</button>
+        </div>
+
+        <div id="empty" hidden>
+          <div class="card-top"><span>本轮题库已完成</span><span>180 个问题</span></div>
+          <h2>这一轮，已经全部探索过。</h2>
+          <p class="welcome-text">想重新遇见这些问题时，可以清除完成标记，再开始一轮。</p>
+          <button id="reset-empty" class="primary">重新开始一轮</button>
+        </div>
+      </article>
+
+      <aside class="side-column" aria-label="学习节奏与总结提示">
+        <section class="timer-panel" aria-labelledby="timer-heading">
+          <div class="panel-heading"><h2 id="timer-heading">留出一刻钟</h2><span id="timer-status">抽题后开始</span></div>
+          <div class="clock-line"><output id="timer-display" aria-label="剩余时间 15 分钟">15:00</output><span>分钟</span></div>
+          <div id="timer-progress" class="timer-track" role="progressbar" aria-label="学习时间进度" aria-valuemin="0" aria-valuemax="900" aria-valuenow="0"><span id="timer-fill"></span></div>
+          <div class="timer-actions"><button id="timer-toggle" class="secondary" disabled>开始 15 分钟</button><button id="timer-reset" class="text-button" disabled>重置</button></div>
+          <p id="timer-hint" class="small">先抽一个问题，再开始计时。</p>
+        </section>
+
+        <section class="rhythm-panel" aria-labelledby="rhythm-heading">
+          <h2 id="rhythm-heading">这样用这 15 分钟</h2>
+          <ol class="rhythm"><li><span class="duration">3 分钟</span><div><strong>读懂问题</strong><p>圈定概念，带着疑问出发。</p></div></li><li><span class="duration">9 分钟</span><div><strong>查阅与比较</strong><p>找解释，也找依据和边界。</p></div></li><li><span class="duration">3 分钟</span><div><strong>用自己的话归纳</strong><p>不必面面俱到，说清一点就好。</p></div></li></ol>
+        </section>
+
+        <section class="reflection-panel" aria-labelledby="reflection-heading">
+          <h2 id="reflection-heading">结束前，问自己</h2>
+          <ul><li>它是什么？</li><li>有什么依据？</li><li>我能怎样应用？</li></ul>
+          <p class="small">口头说一遍，或在自己的本子上写几句。</p>
+        </section>
+      </aside>
+    </div>
+    <footer class="page-footer"><span>只抽问题，把思考留给你。</span><span>无需注册 · 不用录入</span></footer>
+    <p id="storage-warning" class="notice" hidden>当前浏览器无法保存完成标记。本次打开期间仍会避开已完成题目。</p>
+    <noscript><p class="notice">请启用浏览器 JavaScript，才能随机抽题和使用计时器。</p></noscript>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <dialog id="about-dialog" aria-labelledby="about-title">
+    <div class="dialog-heading"><h2 id="about-title">一小步，也是在学习</h2><button class="close-button" id="about-close" aria-label="关闭题库与使用说明">×</button></div>
+    <p>每次从全部类别中随机抽一道未完成的问题。换题不会算完成；一轮换题会尽量不重复。</p>
+    <h3>六类知识题库</h3><ul id="category-list" class="category-list"></ul>
+    <h3>在 iPhone 上使用</h3><p>用 Safari 打开网址，可在分享菜单中选择“添加到主屏幕”。添加后，先联网打开一次，题库准备好后即可离线抽题；查资料需要联网。</p>
+    <h3>关于计时</h3><p>离开页面查资料、或锁屏后，计时仍按经过的时间计算，返回页面时会更新。刷新或关闭页面会重置计时；到时不会发送系统通知。</p>
+    <h3>只在本机记住题号</h3><p>只保存你点过“已完成”的题目编号，不保存笔记、日期或用时，不上传完成标记。更换浏览器、清除网站数据或使用无痕模式，可能使标记丢失。Safari 与主屏幕图标可能有独立的存储，建议固定一个入口使用。</p>
+    <div class="reset-zone"><p id="completed-count"></p><button id="reset-open" class="text-button">清除全部完成标记</button></div>
+  </dialog>
+
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><h2 id="confirm-title">重新开始一轮？</h2><p>清除这台设备、当前浏览器中的完成题号，全部问题将可再次抽到。</p><div class="confirm-actions"><button id="reset-cancel" class="secondary">取消</button><button id="reset-confirm" class="primary">清除并重新开始</button></div></dialog>
+</body>
+</html>
