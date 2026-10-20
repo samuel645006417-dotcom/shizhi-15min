@@ -1,10 +1,22 @@
 'use strict';
 (() => {
-  const { cards, categories } = window.SHIZHI_LIBRARY;
+  const $ = id => document.getElementById(id);
+  const library = window.SHIZHI_LIBRARY;
+  if (!Array.isArray(library?.cards) || !library.cards.length || !Array.isArray(library.categories) || !library.categories.length) {
+    $('content-warning').hidden = false;
+    $('draw-first').disabled = true;
+    return;
+  }
+  const { cards, categories } = library;
+  const articles = window.SHIZHI_ARTICLES;
   const byId = new Map(cards.map(card => [card.id, card]));
   const categoryMap = new Map(categories.map(category => [category.id, category]));
   const KEY = 'shizhi.completed.v1';
-  const $ = id => document.getElementById(id);
+  if (!articles || cards.some(card => !articles[card.id]?.sections?.length)) {
+    $('content-warning').hidden = false;
+    $('draw-first').disabled = true;
+    return;
+  }
   let completed = new Set();
   let storageOK = true;
   let current = null;
@@ -93,7 +105,7 @@
     $('timer-reset').disabled = !available;
     $('timer-toggle').textContent = '开始 15 分钟';
     $('timer-status').textContent = available ? '准备就绪' : '抽题后开始';
-    $('timer-hint').textContent = available ? '离开页面查资料时继续计时，返回时更新。' : '先抽一个问题，再开始计时。';
+    $('timer-hint').textContent = available ? '阅读和记笔记共留 15 分钟，可随时暂停。' : '先抽一个知识点，再开始计时。';
     renderTimer();
   }
 
@@ -141,28 +153,48 @@
     $('card-category').textContent = category.name;
     $('topic-title').textContent = current.title;
     $('topic-question').textContent = current.question;
-    $('direction').textContent = current.direction;
-    $('source-guide').textContent = category.guide;
-    $('keywords').replaceChildren(...current.keywords.map(text => {
-      const span = document.createElement('span');
-      span.className = 'keyword';
-      span.textContent = text;
-      return span;
-    }));
-    const query = encodeURIComponent(`${current.title} ${current.keywords[1]}`);
-    $('search-baidu').href = `https://www.baidu.com/s?wd=${query}`;
-    $('search-bing').href = `https://www.bing.com/search?q=${query}`;
-    $('search-baidu').setAttribute('aria-label', `在百度检索${current.title}，在新页面打开`);
-    $('search-bing').setAttribute('aria-label', `在必应检索${current.title}，在新页面打开`);
-    document.querySelector('.source-guide').open = false;
+    renderArticle(articles[current.id]);
     renderCompletion();
+  }
+
+  function renderArticle(article) {
+    const sections = article.sections.map(section => {
+      const node = document.createElement('section');
+      const heading = document.createElement('h3');
+      heading.textContent = section.heading;
+      node.append(heading);
+      for (const text of section.paragraphs) {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = text;
+        node.append(paragraph);
+      }
+      return node;
+    });
+    $('article-content').replaceChildren(...sections);
+    const length = article.sections.reduce((sum, section) => sum + section.paragraphs.join('').replace(/\s/g, '').length, 0);
+    $('article-length').textContent = `原创讲解 · 约 ${Math.round(length / 100) * 100} 字`;
+    $('takeaway-text').textContent = article.takeaway;
+    $('article-reflection-text').textContent = article.reflection;
+    $('article-sources').replaceChildren(...article.sources.map(source => {
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      link.textContent = source.title;
+      link.href = source.url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      const note = document.createElement('p');
+      note.textContent = source.note;
+      li.append(link, note);
+      return li;
+    }));
+    document.querySelector('.article-sources').open = false;
   }
 
   function renderCompletion() {
     const done = !!current && completed.has(current.id);
     $('complete').disabled = done;
     $('complete').textContent = done ? '已完成，本题以后会避开' : '标记已完成';
-    $('card-state').textContent = done ? '已完成' : '本次学习问题';
+    $('card-state').textContent = done ? '已完成' : '本次学习';
     $('card-state').classList.toggle('completed-label', done);
     $('draw-next').textContent = done ? '再抽一个 ↗' : '换一题 ↻';
     $('undo').hidden = !done;
@@ -194,6 +226,7 @@
     renderCurrent();
     resetTimer();
     $('topic-title').focus({ preventScroll: true });
+    document.querySelector('.question-panel').scrollIntoView({ block: 'start' });
     if (previous === current.id && available.length === 1) notify('只剩这一个未完成问题了。');
   }
 
@@ -261,6 +294,7 @@
   updateCounts();
   $('draw-first').addEventListener('click', draw);
   $('draw-next').addEventListener('click', draw);
+  $('draw-change-top').addEventListener('click', draw);
   $('complete').addEventListener('click', complete);
   $('undo').addEventListener('click', undo);
   $('timer-toggle').addEventListener('click', toggleTimer);
@@ -296,7 +330,15 @@
           $('timer-hint').textContent = '这个题号已记住，下次抽取会避开。';
         }
       }
-    } else if (completed.size === cards.length) draw();
+    } else if (completed.size === cards.length) {
+      draw();
+    } else if (!$('empty').hidden) {
+      bag = [];
+      $('empty').hidden = true;
+      $('welcome').hidden = false;
+      document.querySelector('.question-panel').setAttribute('aria-labelledby', 'card-heading');
+      document.querySelector('.question-panel').removeAttribute('aria-label');
+    }
   });
   if (completed.size === cards.length) draw();
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
