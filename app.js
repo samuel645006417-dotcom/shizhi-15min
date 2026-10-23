@@ -12,7 +12,7 @@
   const byId = new Map(cards.map(card => [card.id, card]));
   const categoryMap = new Map(categories.map(category => [category.id, category]));
   const KEY = 'shizhi.completed.v1';
-  if (!articles || cards.some(card => !articles[card.id]?.sections?.length)) {
+  if (!articles || cards.some(card => !articles[card.id]?.theory?.length || !articles[card.id]?.practice?.length)) {
     $('content-warning').hidden = false;
     $('draw-first').disabled = true;
     return;
@@ -21,6 +21,7 @@
   let storageOK = true;
   let current = null;
   let bag = [];
+  let cardView = 'theory';
   let toastTimeout;
   let remainingMs = 15 * 60 * 1000;
   let deadline = null;
@@ -153,12 +154,13 @@
     $('card-category').textContent = category.name;
     $('topic-title').textContent = current.title;
     $('topic-question').textContent = current.question;
+    cardView = 'theory';
     renderArticle(articles[current.id]);
     renderCompletion();
   }
 
   function renderArticle(article) {
-    const sections = article.sections.map(section => {
+    const sections = article[cardView].map(section => {
       const node = document.createElement('section');
       const heading = document.createElement('h3');
       heading.textContent = section.heading;
@@ -171,8 +173,15 @@
       return node;
     });
     $('article-content').replaceChildren(...sections);
-    const length = article.sections.reduce((sum, section) => sum + section.paragraphs.join('').replace(/\s/g, '').length, 0);
-    $('article-length').textContent = `原创讲解 · 约 ${Math.round(length / 100) * 100} 字`;
+    const length = [...article.theory, ...article.practice].reduce((sum, section) => sum + section.paragraphs.join('').replace(/\s/g, '').length, 0);
+    $('article-length').textContent = `双卡原创讲解 · 共约 ${Math.round(length / 100) * 100} 字`;
+    const isTheory = cardView === 'theory';
+    $('reading-card-title').textContent = isTheory ? '理论点' : '应用实践';
+    $('reading-card-position').textContent = isTheory ? '1 / 2' : '2 / 2';
+    $('view-theory').setAttribute('aria-pressed', String(isTheory));
+    $('view-practice').setAttribute('aria-pressed', String(!isTheory));
+    $('card-switch').textContent = isTheory ? '看应用实践 →' : '← 返回理论点';
+    $('article-reflection').hidden = isTheory;
     $('takeaway-text').textContent = article.takeaway;
     $('article-reflection-text').textContent = article.reflection;
     $('article-sources').replaceChildren(...article.sources.map(source => {
@@ -188,6 +197,14 @@
       return li;
     }));
     document.querySelector('.article-sources').open = false;
+  }
+
+  function setCardView(view) {
+    if (!current || cardView === view) return;
+    cardView = view;
+    renderArticle(articles[current.id]);
+    $('reading-card-title').focus({ preventScroll: true });
+    $('reading-card').scrollIntoView({ block: 'start', behavior: 'instant' });
   }
 
   function renderCompletion() {
@@ -292,6 +309,9 @@
   // Probe writes so Safari storage restrictions are visible before any marking.
   persist();
   updateCounts();
+  $('view-theory').addEventListener('click', () => setCardView('theory'));
+  $('view-practice').addEventListener('click', () => setCardView('practice'));
+  $('card-switch').addEventListener('click', () => setCardView(cardView === 'theory' ? 'practice' : 'theory'));
   $('draw-first').addEventListener('click', draw);
   $('draw-next').addEventListener('click', draw);
   $('draw-change-top').addEventListener('click', draw);

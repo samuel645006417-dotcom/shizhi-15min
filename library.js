@@ -1,41 +1,35 @@
 window.SHIZHI_LIBRARY = {
-  "version": 1,
+  "version": 3,
   "categories": [
     {
       "id": "psychology",
-      "name": "心理学",
-      "description": "情绪、认知与行为",
-      "guide": "可先查心理学教材或 APA 心理学词典，区分研究结论、解释与个人经验。"
+      "name": "心理学基础",
+      "description": "理解认知、动机与行为"
     },
     {
-      "id": "learning",
-      "name": "学习方法",
-      "description": "记忆、专注与练习",
-      "guide": "可先查学习科学教材或 The Learning Scientists，优先寻找比较实验和综述。"
-    },
-    {
-      "id": "communication",
-      "name": "沟通与关系",
-      "description": "倾听、表达与边界",
-      "guide": "可查沟通教材、冲突研究或原作者著作；把表达方法当作可尝试的策略，而非万能话术。"
+      "id": "development",
+      "name": "儿童发展",
+      "description": "认识成长中的能力与差异"
     },
     {
       "id": "parenting",
       "name": "家庭教育",
-      "description": "发展、陪伴与互动",
-      "guide": "可先查儿童发展教材或 UNICEF 育儿资料，留意年龄、情境和个体差异。"
+      "description": "陪伴、学习与家庭协作"
     },
     {
-      "id": "reasoning",
-      "name": "逻辑与判断",
-      "description": "证据、概率与决策",
-      "guide": "可先查统计学、批判性思维教材或研究方法入门，核对原始数据与比较对象。"
+      "id": "discipline",
+      "name": "正面管教",
+      "description": "尊重、责任与合作"
     },
     {
-      "id": "humanities",
-      "name": "人文与社会",
-      "description": "观念、制度与生活",
-      "guide": "可先查社会学、哲学教材或 Stanford Encyclopedia of Philosophy，区分概念、立场和事实判断。"
+      "id": "communication",
+      "name": "亲子沟通",
+      "description": "倾听、表达与关系修复"
+    },
+    {
+      "id": "support",
+      "name": "情绪与行为支持",
+      "description": "观察需要，提供适当支持"
     }
   ],
   "cards": [
@@ -51,17 +45,6 @@ window.SHIZHI_LIBRARY = {
       "direction": "比较支持证据与反对证据各会怎样被对待。"
     },
     {
-      "id": "psychology-002",
-      "category": "psychology",
-      "title": "思想抑制",
-      "question": "越想不去想一件事，为什么反而想得更多？",
-      "keywords": [
-        "思想抑制",
-        "thought suppression ironic process"
-      ],
-      "direction": "查找白熊实验，并留意实验情境与日常生活的区别。"
-    },
-    {
       "id": "psychology-003",
       "category": "psychology",
       "title": "损失厌恶",
@@ -71,28 +54,6 @@ window.SHIZHI_LIBRARY = {
         "loss aversion prospect theory"
       ],
       "direction": "找一个参照点改变选择的例子，看看结论有什么适用边界。"
-    },
-    {
-      "id": "psychology-004",
-      "category": "psychology",
-      "title": "情绪命名",
-      "question": "把感受说清楚，为什么可能帮助调节情绪？",
-      "keywords": [
-        "情绪命名",
-        "affect labeling"
-      ],
-      "direction": "区分给情绪命名与压抑情绪，查找相关实验。"
-    },
-    {
-      "id": "psychology-005",
-      "category": "psychology",
-      "title": "认知重评",
-      "question": "同一件事换一种理解，会怎样影响情绪？",
-      "keywords": [
-        "认知重评",
-        "cognitive reappraisal"
-      ],
-      "direction": "比较认知重评与表达抑制，并各举一个例子。"
     },
     {
       "id": "psychology-006",
@@ -249,50 +210,6 @@ window.SHIZHI_LIBRARY = {
       "direction": "分别查向上比较和向下比较，关注比较对象与目的。"
     },
     {
-      "id": "psychology-020",
-      "category": "psychology",
-      "title": "自我同情",
-      "question": "善待自己和给自己找借口，有什么区别？",
-      "keywords": [
-        "自我同情",
-        "self compassion accountability"
-      ],
-      "direction": "查概念的组成，找一个承认责任又减少苛责的例子。"
-    },
-    {
-      "id": "psychology-021",
-      "category": "psychology",
-      "title": "情绪与身体",
-      "question": "身体感觉如何参与我们对情绪的理解？",
-      "keywords": [
-        "情绪与身体",
-        "interoception emotion"
-      ],
-      "direction": "区分身体唤醒、情境解释与情绪体验。"
-    },
-    {
-      "id": "psychology-022",
-      "category": "psychology",
-      "title": "压力评价",
-      "question": "为什么同一项任务，有人视为挑战，有人视为威胁？",
-      "keywords": [
-        "压力评价",
-        "stress appraisal challenge threat"
-      ],
-      "direction": "查初级评价、次级评价及可用资源的作用。"
-    },
-    {
-      "id": "psychology-023",
-      "category": "psychology",
-      "title": "睡眠与情绪",
-      "question": "睡眠不足可能怎样影响情绪调节？",
-      "keywords": [
-        "睡眠与情绪",
-        "sleep deprivation emotion regulation"
-      ],
-      "direction": "关注研究设计，不把相关关系直接当成因果。"
-    },
-    {
       "id": "psychology-024",
       "category": "psychology",
       "title": "选择过载",
@@ -337,17 +254,6 @@ window.SHIZHI_LIBRARY = {
       "direction": "比较时间、空间与自我距离，不把抽离等同于逃避。"
     },
     {
-      "id": "psychology-028",
-      "category": "psychology",
-      "title": "情绪预测",
-      "question": "我们预测未来感受时，容易出现什么误差？",
-      "keywords": [
-        "情绪预测",
-        "affective forecasting impact bias"
-      ],
-      "direction": "查影响偏差，想想预测时遗漏了哪些日常因素。"
-    },
-    {
       "id": "psychology-029",
       "category": "psychology",
       "title": "人格特质",
@@ -371,7 +277,7 @@ window.SHIZHI_LIBRARY = {
     },
     {
       "id": "learning-001",
-      "category": "learning",
+      "category": "psychology",
       "title": "检索练习",
       "question": "为什么合上书回想，有时比反复阅读更有效？",
       "keywords": [
@@ -382,7 +288,7 @@ window.SHIZHI_LIBRARY = {
     },
     {
       "id": "learning-002",
-      "category": "learning",
+      "category": "psychology",
       "title": "间隔学习",
       "question": "同样的学习时间，分开用为什么可能更有效？",
       "keywords": [
@@ -393,7 +299,7 @@ window.SHIZHI_LIBRARY = {
     },
     {
       "id": "learning-003",
-      "category": "learning",
+      "category": "psychology",
       "title": "交错练习",
       "question": "把不同题型混合练习，在哪些情况下更有帮助？",
       "keywords": [
@@ -404,7 +310,7 @@ window.SHIZHI_LIBRARY = {
     },
     {
       "id": "learning-004",
-      "category": "learning",
+      "category": "psychology",
       "title": "精细加工",
       "question": "把新知识和旧知识联系起来，会怎样帮助记忆？",
       "keywords": [
@@ -415,7 +321,7 @@ window.SHIZHI_LIBRARY = {
     },
     {
       "id": "learning-005",
-      "category": "learning",
+      "category": "psychology",
       "title": "双重编码",
       "question": "文字和图像一起学，什么时候有帮助？",
       "keywords": [
@@ -425,19 +331,8 @@ window.SHIZHI_LIBRARY = {
       "direction": "区分有意义的图示与装饰图片，检查是否增加负担。"
     },
     {
-      "id": "learning-006",
-      "category": "learning",
-      "title": "认知负荷",
-      "question": "学习内容为什么会让人感觉脑子装不下？",
-      "keywords": [
-        "认知负荷",
-        "cognitive load theory"
-      ],
-      "direction": "查工作记忆限制，比较任务本身与呈现方式带来的负担。"
-    },
-    {
       "id": "learning-007",
-      "category": "learning",
+      "category": "psychology",
       "title": "示例学习",
       "question": "新手先看完整例题，为什么有时更有效？",
       "keywords": [
@@ -448,7 +343,7 @@ window.SHIZHI_LIBRARY = {
     },
     {
       "id": "learning-008",
-      "category": "learning",
+      "category": "psychology",
       "title": "自我解释",
       "question": "学习时问“这一步为什么成立”，有什么作用？",
       "keywords": [
@@ -458,206 +353,8 @@ window.SHIZHI_LIBRARY = {
       "direction": "找一个具体解题步骤，区分解释原理与复述步骤。"
     },
     {
-      "id": "learning-009",
-      "category": "learning",
-      "title": "费曼式讲解",
-      "question": "用简单语言讲给别人听，怎样才算真正理解？",
-      "keywords": [
-        "费曼式讲解",
-        "learning by teaching explanation"
-      ],
-      "direction": "关注解释时暴露的知识缺口，避免只追求说得流利。"
-    },
-    {
-      "id": "learning-010",
-      "category": "learning",
-      "title": "学习迁移",
-      "question": "在一个场景会用的知识，为什么换场景就不会了？",
-      "keywords": [
-        "学习迁移",
-        "transfer of learning near far"
-      ],
-      "direction": "区分近迁移与远迁移，查促进迁移的条件。"
-    },
-    {
-      "id": "learning-011",
-      "category": "learning",
-      "title": "刻意练习",
-      "question": "重复练习和有针对性的练习，有什么差别？",
-      "keywords": [
-        "刻意练习",
-        "deliberate practice feedback"
-      ],
-      "direction": "查明确目标、反馈与纠错，留意领域差异。"
-    },
-    {
-      "id": "learning-012",
-      "category": "learning",
-      "title": "反馈时机",
-      "question": "答案是马上看，还是过一会儿再看更好？",
-      "keywords": [
-        "反馈时机",
-        "feedback timing learning"
-      ],
-      "direction": "比较任务难度、错误类型与反馈时机。"
-    },
-    {
-      "id": "learning-013",
-      "category": "learning",
-      "title": "元认知",
-      "question": "如何判断自己是真的会了，还是只是看着熟悉？",
-      "keywords": [
-        "元认知",
-        "metacognition judgments of learning"
-      ],
-      "direction": "查学习判断与实际测验的差距，设计一个检验方法。"
-    },
-    {
-      "id": "learning-014",
-      "category": "learning",
-      "title": "生成效应",
-      "question": "先自己尝试产生答案，为什么可能记得更牢？",
-      "keywords": [
-        "生成效应",
-        "generation effect memory"
-      ],
-      "direction": "查生成失败后获得反馈的作用及适用条件。"
-    },
-    {
-      "id": "learning-015",
-      "category": "learning",
-      "title": "预先测试",
-      "question": "还没学就先做题，有可能帮助后续学习吗？",
-      "keywords": [
-        "预先测试",
-        "pretesting effect learning"
-      ],
-      "direction": "关注预先问题如何引导注意，以及反馈的必要性。"
-    },
-    {
-      "id": "learning-016",
-      "category": "learning",
-      "title": "笔记压缩",
-      "question": "逐字抄写与用自己的话重组，学习过程有何不同？",
-      "keywords": [
-        "笔记压缩",
-        "generative note taking"
-      ],
-      "direction": "查研究如何区分记录媒介、记录方式与复习机会。"
-    },
-    {
-      "id": "learning-017",
-      "category": "learning",
-      "title": "概念图",
-      "question": "把知识画成关系图，什么时候比列清单更合适？",
-      "keywords": [
-        "概念图",
-        "concept mapping learning"
-      ],
-      "direction": "查节点之间的关系词，比较概念图与思维导图。"
-    },
-    {
-      "id": "learning-018",
-      "category": "learning",
-      "title": "组块",
-      "question": "熟悉的知识为什么能被当成一个整体处理？",
-      "keywords": [
-        "组块",
-        "chunking working memory"
-      ],
-      "direction": "用棋局、词组或数字举例，关注已有知识的作用。"
-    },
-    {
-      "id": "learning-019",
-      "category": "learning",
-      "title": "注意切换",
-      "question": "一边看消息一边学习，会产生哪些切换成本？",
-      "keywords": [
-        "注意切换",
-        "task switching cost attention"
-      ],
-      "direction": "区分真正同时处理与快速切换，查简单和复杂任务差别。"
-    },
-    {
-      "id": "learning-020",
-      "category": "learning",
-      "title": "专注时段",
-      "question": "专注时段应该固定为某个长度吗？",
-      "keywords": [
-        "专注时段",
-        "sustained attention breaks learning"
-      ],
-      "direction": "比较任务、疲劳与个人差异，查休息的研究。"
-    },
-    {
-      "id": "learning-021",
-      "category": "learning",
-      "title": "睡眠巩固",
-      "question": "学习之后的睡眠，可能怎样参与记忆巩固？",
-      "keywords": [
-        "睡眠巩固",
-        "sleep memory consolidation"
-      ],
-      "direction": "区分不同记忆任务，留意睡眠与学习前状态。"
-    },
-    {
-      "id": "learning-022",
-      "category": "learning",
-      "title": "运动与学习",
-      "question": "运动和注意、记忆之间，有哪些证据？",
-      "keywords": [
-        "运动与学习",
-        "exercise cognition systematic review"
-      ],
-      "direction": "区分一次运动与长期训练，关注效应大小。"
-    },
-    {
-      "id": "learning-023",
-      "category": "learning",
-      "title": "困难与流畅感",
-      "question": "学起来费劲，就说明方法不好吗？",
-      "keywords": [
-        "困难与流畅感",
-        "desirable difficulties learning fluency"
-      ],
-      "direction": "区分有助学习的困难与无意义的额外负担。"
-    },
-    {
-      "id": "learning-024",
-      "category": "learning",
-      "title": "错题归因",
-      "question": "一道题做错后，怎样判断问题出在哪里？",
-      "keywords": [
-        "错题归因",
-        "error analysis learning feedback"
-      ],
-      "direction": "分别检查概念、策略、步骤与粗心，避免只抄正确答案。"
-    },
-    {
-      "id": "learning-025",
-      "category": "learning",
-      "title": "变式练习",
-      "question": "改变例子的表面形式，如何帮助理解同一原理？",
-      "keywords": [
-        "变式练习",
-        "variation theory transfer learning"
-      ],
-      "direction": "找一组共享原理但情境不同的例子。"
-    },
-    {
-      "id": "learning-026",
-      "category": "learning",
-      "title": "目标层级",
-      "question": "结果目标与过程目标，分别怎样指导学习？",
-      "keywords": [
-        "目标层级",
-        "process goals outcome goals learning"
-      ],
-      "direction": "把一个学习目标拆成可观察的行动，再检查二者联系。"
-    },
-    {
       "id": "learning-027",
-      "category": "learning",
+      "category": "psychology",
       "title": "实施意图",
       "question": "“如果遇到某情况，就做某事”为什么可能促进执行？",
       "keywords": [
@@ -667,8 +364,63 @@ window.SHIZHI_LIBRARY = {
       "direction": "查线索与行动的绑定，比较模糊愿望和具体计划。"
     },
     {
+      "id": "learning-006",
+      "category": "development",
+      "title": "认知负荷",
+      "question": "学习内容为什么会让人感觉脑子装不下？",
+      "keywords": [
+        "认知负荷",
+        "cognitive load theory"
+      ],
+      "direction": "查工作记忆限制，比较任务本身与呈现方式带来的负担。"
+    },
+    {
+      "id": "learning-010",
+      "category": "development",
+      "title": "学习迁移",
+      "question": "在一个场景会用的知识，为什么换场景就不会了？",
+      "keywords": [
+        "学习迁移",
+        "transfer of learning near far"
+      ],
+      "direction": "区分近迁移与远迁移，查促进迁移的条件。"
+    },
+    {
+      "id": "learning-013",
+      "category": "development",
+      "title": "元认知",
+      "question": "如何判断自己是真的会了，还是只是看着熟悉？",
+      "keywords": [
+        "元认知",
+        "metacognition judgments of learning"
+      ],
+      "direction": "查学习判断与实际测验的差距，设计一个检验方法。"
+    },
+    {
+      "id": "learning-018",
+      "category": "development",
+      "title": "组块",
+      "question": "熟悉的知识为什么能被当成一个整体处理？",
+      "keywords": [
+        "组块",
+        "chunking working memory"
+      ],
+      "direction": "用棋局、词组或数字举例，关注已有知识的作用。"
+    },
+    {
+      "id": "learning-021",
+      "category": "development",
+      "title": "睡眠巩固",
+      "question": "学习之后的睡眠，可能怎样参与记忆巩固？",
+      "keywords": [
+        "睡眠巩固",
+        "sleep memory consolidation"
+      ],
+      "direction": "区分不同记忆任务，留意睡眠与学习前状态。"
+    },
+    {
       "id": "learning-028",
-      "category": "learning",
+      "category": "development",
       "title": "学习风格",
       "question": "“我是视觉型学习者”能决定最佳学习方法吗？",
       "keywords": [
@@ -679,7 +431,7 @@ window.SHIZHI_LIBRARY = {
     },
     {
       "id": "learning-029",
-      "category": "learning",
+      "category": "development",
       "title": "先备知识",
       "question": "学习新内容时，已有知识怎样帮助或误导理解？",
       "keywords": [
@@ -689,371 +441,8 @@ window.SHIZHI_LIBRARY = {
       "direction": "查错误概念如何影响新知识，找一个纠正过程。"
     },
     {
-      "id": "learning-030",
-      "category": "learning",
-      "title": "知识边界",
-      "question": "怎样知道一个结论在什么时候不适用？",
-      "keywords": [
-        "知识边界",
-        "boundary conditions learning transfer"
-      ],
-      "direction": "为一个学过的原则找反例，并明确适用条件。"
-    },
-    {
-      "id": "communication-001",
-      "category": "communication",
-      "title": "积极倾听",
-      "question": "怎样让对方知道自己被理解，而不急着给建议？",
-      "keywords": [
-        "积极倾听",
-        "active listening reflective listening"
-      ],
-      "direction": "比较复述、澄清与评价，各写一句表达。"
-    },
-    {
-      "id": "communication-002",
-      "category": "communication",
-      "title": "感受与判断",
-      "question": "“我很难过”和“你不在乎我”，表达上有什么区别？",
-      "keywords": [
-        "感受与判断",
-        "feelings judgments communication"
-      ],
-      "direction": "区分自身体验、对事实的描述与对动机的推断。"
-    },
-    {
-      "id": "communication-003",
-      "category": "communication",
-      "title": "我信息",
-      "question": "表达不满时，“我信息”怎样说才不变相指责？",
-      "keywords": [
-        "我信息",
-        "I statements communication"
-      ],
-      "direction": "查具体行为、影响与请求，比较两种说法。"
-    },
-    {
-      "id": "communication-004",
-      "category": "communication",
-      "title": "开放式提问",
-      "question": "怎样提问，更容易得到具体而有用的信息？",
-      "keywords": [
-        "开放式提问",
-        "open ended questions communication"
-      ],
-      "direction": "比较开放式、封闭式与带有预设的问题。"
-    },
-    {
-      "id": "communication-005",
-      "category": "communication",
-      "title": "澄清与假设",
-      "question": "不确定对方意思时，如何核对而不直接下结论？",
-      "keywords": [
-        "澄清与假设",
-        "perception checking communication"
-      ],
-      "direction": "找一个“我的理解是……对吗”的实际应用。"
-    },
-    {
-      "id": "communication-006",
-      "category": "communication",
-      "title": "心理边界",
-      "question": "设立边界和要求别人服从，有什么区别？",
-      "keywords": [
-        "心理边界",
-        "personal boundaries assertiveness"
-      ],
-      "direction": "关注自己会采取的行动，而非控制他人的选择。"
-    },
-    {
-      "id": "communication-007",
-      "category": "communication",
-      "title": "坚定表达",
-      "question": "坚定、被动与攻击性的表达，怎样区分？",
-      "keywords": [
-        "坚定表达",
-        "assertive passive aggressive communication"
-      ],
-      "direction": "为同一个拒绝场景写出三种表达并比较。"
-    },
-    {
-      "id": "communication-008",
-      "category": "communication",
-      "title": "请求与要求",
-      "question": "一个请求，在什么情况下会被听成命令？",
-      "keywords": [
-        "请求与要求",
-        "requests demands nonviolent communication"
-      ],
-      "direction": "查拒绝是否被允许，以及拒绝之后的互动。"
-    },
-    {
-      "id": "communication-009",
-      "category": "communication",
-      "title": "事实与解读",
-      "question": "沟通冲突中，怎样把观察到的事实与解释分开？",
-      "keywords": [
-        "事实与解读",
-        "observation interpretation communication"
-      ],
-      "direction": "找一个双方都能核对的描述，去掉动机猜测。"
-    },
-    {
-      "id": "communication-010",
-      "category": "communication",
-      "title": "情绪确认",
-      "question": "承认对方的感受，是否等于同意对方的观点？",
-      "keywords": [
-        "情绪确认",
-        "emotional validation agreement"
-      ],
-      "direction": "比较确认体验、赞同行为与纵容行为。"
-    },
-    {
-      "id": "communication-011",
-      "category": "communication",
-      "title": "冲突暂停",
-      "question": "争执中暂时离开，怎样才不会变成冷处理？",
-      "keywords": [
-        "冲突暂停",
-        "conflict time out return agreement"
-      ],
-      "direction": "关注说明原因、约定返回与继续讨论。"
-    },
-    {
-      "id": "communication-012",
-      "category": "communication",
-      "title": "修复尝试",
-      "question": "一次争吵中，哪些小动作可能帮助恢复合作？",
-      "keywords": [
-        "修复尝试",
-        "repair attempts relationship conflict"
-      ],
-      "direction": "查修复尝试的形式与接收条件，不把它当作保证。"
-    },
-    {
-      "id": "communication-013",
-      "category": "communication",
-      "title": "道歉的组成",
-      "question": "什么样的道歉更容易让人感到责任被承担？",
-      "keywords": [
-        "道歉的组成",
-        "effective apology responsibility repair"
-      ],
-      "direction": "比较说明影响、承担责任与补救行动。"
-    },
-    {
-      "id": "communication-014",
-      "category": "communication",
-      "title": "建议前征询",
-      "question": "给建议前先问一句，可能怎样改变交流？",
-      "keywords": [
-        "建议前征询",
-        "unsolicited advice autonomy support"
-      ],
-      "direction": "区分对方需要倾听、信息还是共同解决问题。"
-    },
-    {
-      "id": "communication-015",
-      "category": "communication",
-      "title": "共同问题",
-      "question": "怎样把“你对我错”改成双方一起解决的问题？",
-      "keywords": [
-        "共同问题",
-        "collaborative problem solving conflict"
-      ],
-      "direction": "查共同目标、各自关切与可执行选项。"
-    },
-    {
-      "id": "communication-016",
-      "category": "communication",
-      "title": "意图与影响",
-      "question": "“我不是那个意思”为什么未必能解决冲突？",
-      "keywords": [
-        "意图与影响",
-        "intent impact communication"
-      ],
-      "direction": "分别描述意图、实际影响与下一步修复。"
-    },
-    {
-      "id": "communication-017",
-      "category": "communication",
-      "title": "归因与关系",
-      "question": "如何避免把一次失约上升为“你从来不在乎”？",
-      "keywords": [
-        "归因与关系",
-        "relationship attribution overgeneralization"
-      ],
-      "direction": "区分具体事件、稳定性判断与全称表达。"
-    },
-    {
-      "id": "communication-018",
-      "category": "communication",
-      "title": "反馈的具体性",
-      "question": "为什么“你要积极一点”常常难以执行？",
-      "keywords": [
-        "反馈的具体性",
-        "specific behavioral feedback"
-      ],
-      "direction": "将评价改写为可观察的行为和下一步请求。"
-    },
-    {
-      "id": "communication-019",
-      "category": "communication",
-      "title": "倾听中的沉默",
-      "question": "对话里留一点沉默，什么时候有帮助？",
-      "keywords": [
-        "倾听中的沉默",
-        "silence listening communication"
-      ],
-      "direction": "关注情境、文化与关系，不默认沉默只有一种含义。"
-    },
-    {
-      "id": "communication-020",
-      "category": "communication",
-      "title": "信任修复",
-      "question": "信任被破坏后，语言和行动分别有什么作用？",
-      "keywords": [
-        "信任修复",
-        "trust repair consistency accountability"
-      ],
-      "direction": "查承诺、可验证行动与时间的作用。"
-    },
-    {
-      "id": "communication-021",
-      "category": "communication",
-      "title": "关系中的自主",
-      "question": "亲密关系中，怎样同时保留联结与自主？",
-      "keywords": [
-        "关系中的自主",
-        "autonomy relatedness relationships"
-      ],
-      "direction": "找一个相互商量而非单方面决定的场景。"
-    },
-    {
-      "id": "communication-022",
-      "category": "communication",
-      "title": "协商底线",
-      "question": "讨论分歧前，怎样分清立场、利益和底线？",
-      "keywords": [
-        "协商底线",
-        "principled negotiation interests positions"
-      ],
-      "direction": "用一个生活场景区分“想要什么”与“为什么想要”。"
-    },
-    {
-      "id": "communication-023",
-      "category": "communication",
-      "title": "文字误读",
-      "question": "为什么同一句话在聊天软件里更容易被误解？",
-      "keywords": [
-        "文字误读",
-        "text communication tone ambiguity"
-      ],
-      "direction": "查非语言线索缺失，比较两种补充上下文的方法。"
-    },
-    {
-      "id": "communication-024",
-      "category": "communication",
-      "title": "拒绝与解释",
-      "question": "拒绝别人时，解释越多就一定越好吗？",
-      "keywords": [
-        "拒绝与解释",
-        "assertive refusal boundaries"
-      ],
-      "direction": "比较清晰拒绝、简短理由与过度辩解。"
-    },
-    {
-      "id": "communication-025",
-      "category": "communication",
-      "title": "共情边界",
-      "question": "理解别人的感受，怎样避免把所有责任揽到自己身上？",
-      "keywords": [
-        "共情边界",
-        "empathy compassion boundaries"
-      ],
-      "direction": "区分理解、帮助与替对方做决定。"
-    },
-    {
-      "id": "communication-026",
-      "category": "communication",
-      "title": "防御反应",
-      "question": "受到批评时，为什么容易先解释而不是先理解？",
-      "keywords": [
-        "防御反应",
-        "defensiveness criticism communication"
-      ],
-      "direction": "查自我威胁，练习核对具体问题再回应。"
-    },
-    {
-      "id": "communication-027",
-      "category": "communication",
-      "title": "关系中的公平",
-      "question": "关系里的公平，是否一定意味着双方付出相同？",
-      "keywords": [
-        "关系中的公平",
-        "equity equality relationship"
-      ],
-      "direction": "比较平等、需要与公平感，不用单一标准衡量。"
-    },
-    {
-      "id": "communication-028",
-      "category": "communication",
-      "title": "低冲突开场",
-      "question": "提出一个难谈的话题时，怎样开头更清楚？",
-      "keywords": [
-        "低冲突开场",
-        "soft start up conflict conversation"
-      ],
-      "direction": "描述一件具体事、自己的需要和可讨论的请求。"
-    },
-    {
-      "id": "communication-029",
-      "category": "communication",
-      "title": "建议与追问",
-      "question": "对方说“我不想做了”时，先问什么更有帮助？",
-      "keywords": [
-        "建议与追问",
-        "supportive communication advice questions"
-      ],
-      "direction": "查情绪、困难与目标，避免先替对方确定原因。"
-    },
-    {
-      "id": "communication-030",
-      "category": "communication",
-      "title": "分歧中的复述",
-      "question": "能准确复述对方观点，为什么可能改善讨论？",
-      "keywords": [
-        "分歧中的复述",
-        "perspective taking paraphrasing disagreement"
-      ],
-      "direction": "先找共同确认的表述，再指出真正的分歧。"
-    },
-    {
-      "id": "parenting-001",
-      "category": "parenting",
-      "title": "共同调节",
-      "question": "孩子情绪激动时，成人的稳定能起什么作用？",
-      "keywords": [
-        "共同调节",
-        "co regulation children emotions"
-      ],
-      "direction": "区分先帮助平复与随后讲规则，留意年龄差异。"
-    },
-    {
-      "id": "parenting-002",
-      "category": "parenting",
-      "title": "情绪教养",
-      "question": "接纳孩子的情绪，和允许所有行为有什么区别？",
-      "keywords": [
-        "情绪教养",
-        "emotion coaching limits parenting"
-      ],
-      "direction": "比较确认感受、限制行为与提供替代行为。"
-    },
-    {
       "id": "parenting-003",
-      "category": "parenting",
+      "category": "development",
       "title": "依恋与探索",
       "question": "安全感为什么可能支持孩子探索新事物？",
       "keywords": [
@@ -1064,7 +453,7 @@ window.SHIZHI_LIBRARY = {
     },
     {
       "id": "parenting-004",
-      "category": "parenting",
+      "category": "development",
       "title": "执行功能",
       "question": "孩子“知道但做不到”，可能涉及哪些能力？",
       "keywords": [
@@ -1075,7 +464,7 @@ window.SHIZHI_LIBRARY = {
     },
     {
       "id": "parenting-005",
-      "category": "parenting",
+      "category": "development",
       "title": "发展适宜性",
       "question": "怎样判断一个要求是否适合孩子目前的发展阶段？",
       "keywords": [
@@ -1083,6 +472,226 @@ window.SHIZHI_LIBRARY = {
         "developmentally appropriate expectations"
       ],
       "direction": "查年龄范围和个体差异，避免把平均水平当硬标准。"
+    },
+    {
+      "id": "parenting-012",
+      "category": "development",
+      "title": "游戏与发展",
+      "question": "自由游戏与有指导的游戏，各可能支持什么？",
+      "keywords": [
+        "游戏与发展",
+        "free play guided play development"
+      ],
+      "direction": "查不同发展目标，避免把游戏只当作学习工具。"
+    },
+    {
+      "id": "parenting-013",
+      "category": "development",
+      "title": "亲子阅读",
+      "question": "共读时怎样提问，能让孩子更多参与？",
+      "keywords": [
+        "亲子阅读",
+        "dialogic reading children"
+      ],
+      "direction": "查跟随兴趣、开放提问与回应扩展。"
+    },
+    {
+      "id": "parenting-015",
+      "category": "development",
+      "title": "脚手架",
+      "question": "帮助孩子时，怎样逐步把支持交还给他？",
+      "keywords": [
+        "脚手架",
+        "scaffolding zone of proximal development"
+      ],
+      "direction": "查示范、提示与逐渐撤除支持。"
+    },
+    {
+      "id": "parenting-021",
+      "category": "development",
+      "title": "分离焦虑",
+      "question": "孩子不愿分开，怎样结合发展阶段理解？",
+      "keywords": [
+        "分离焦虑",
+        "separation anxiety child development"
+      ],
+      "direction": "查正常发展中的变化与稳定告别流程。"
+    },
+    {
+      "id": "parenting-022",
+      "category": "development",
+      "title": "气质差异",
+      "question": "面对陌生环境，有的孩子慢热，有的主动，怎样理解？",
+      "keywords": [
+        "气质差异",
+        "child temperament goodness of fit"
+      ],
+      "direction": "查气质与环境的适配，避免贴固定性格标签。"
+    },
+    {
+      "id": "development-v3-001",
+      "category": "development",
+      "title": "儿童语言发展：听懂、表达与交流",
+      "question": "孩子能背长句，是否就表示他能熟练沟通？",
+      "keywords": [
+        "语言发展",
+        "language development"
+      ],
+      "direction": "区分理解、表达和实际交流，为不同困难提供匹配支持。"
+    },
+    {
+      "id": "development-v3-002",
+      "category": "development",
+      "title": "心理理论：别人知道的和我不同",
+      "question": "为什么孩子会以为别人也知道自己藏东西的位置？",
+      "keywords": [
+        "心理理论",
+        "theory of mind"
+      ],
+      "direction": "理解信念、知识与愿望的差异，避免把视角困难当成故意自私。"
+    },
+    {
+      "id": "development-v3-003",
+      "category": "development",
+      "title": "儿童友谊的发展",
+      "question": "两个孩子经常在一起，为什么仍会争吵？",
+      "keywords": [
+        "儿童友谊",
+        "peer relationships"
+      ],
+      "direction": "理解从共同活动到互惠信任的变化，支持关系技能而不代办友谊。"
+    },
+    {
+      "id": "development-v3-004",
+      "category": "development",
+      "title": "社会参照：孩子为什么先看大人的脸",
+      "question": "面对新事物时，孩子为什么总回头看你？",
+      "keywords": [
+        "社会参照",
+        "social referencing"
+      ],
+      "direction": "理解孩子如何借助他人的情绪线索判断情境，并提供一致可靠的信息。"
+    },
+    {
+      "id": "development-v3-005",
+      "category": "development",
+      "title": "儿童自我概念的发展",
+      "question": "孩子说“我就是不聪明”，我们应该回应什么？",
+      "keywords": [
+        "自我概念",
+        "self-concept"
+      ],
+      "direction": "区分对自己的描述、价值感和具体任务表现，支持更有条件的自我认识。"
+    },
+    {
+      "id": "development-v3-006",
+      "category": "development",
+      "title": "青春期的自主与支持",
+      "question": "孩子越来越要自己决定，父母怎样调整参与方式？",
+      "keywords": [
+        "青春期自主",
+        "adolescent autonomy"
+      ],
+      "direction": "区分自主、隐私与安全责任，随着能力协商实际决定权。"
+    },
+    {
+      "id": "development-v3-007",
+      "category": "development",
+      "title": "儿童道德判断：规则为什么重要",
+      "question": "“没人看见也不能做”与“怕被批评”，有什么不同？",
+      "keywords": [
+        "道德发展",
+        "moral development"
+      ],
+      "direction": "区分伤害、公平、群体惯例和个人选择，讨论行为影响与理由。"
+    },
+    {
+      "id": "development-v3-008",
+      "category": "development",
+      "title": "守恒：形状改变，数量一定改变吗",
+      "question": "为什么同样多的水换个杯子，孩子觉得高杯里的更多？",
+      "keywords": [
+        "守恒",
+        "conservation"
+      ],
+      "direction": "理解知觉外观与数量关系的差异，用可操作比较支持概念形成。"
+    },
+    {
+      "id": "development-v3-009",
+      "category": "development",
+      "title": "物体恒存：看不见不等于不存在",
+      "question": "婴儿为什么喜欢掀开布寻找玩具？",
+      "keywords": [
+        "物体恒存",
+        "object permanence"
+      ],
+      "direction": "理解婴儿如何逐步追踪暂时看不见的物体，避免把游戏当作能力考试。"
+    },
+    {
+      "id": "development-v3-010",
+      "category": "development",
+      "title": "儿童记忆与提问暗示",
+      "question": "为什么反复追问“他是不是推了你”，可能影响孩子的叙述？",
+      "keywords": [
+        "儿童记忆",
+        "suggestibility"
+      ],
+      "direction": "理解记忆重建与信息暗示，使用开放提问并保留不确定性。"
+    },
+    {
+      "id": "development-v3-011",
+      "category": "development",
+      "title": "双语发展：多种语言不是混乱",
+      "question": "孩子在家和学校使用不同语言，会不会因此学得更慢？",
+      "keywords": [
+        "双语发展",
+        "bilingual development"
+      ],
+      "direction": "理解多语输入的总量、质量与情境，避免用单一语言词数给出结论。"
+    },
+    {
+      "id": "development-v3-012",
+      "category": "development",
+      "title": "动作发展：从翻身到协调",
+      "question": "为什么有的孩子先会跑，有的孩子先会说？",
+      "keywords": [
+        "动作发展",
+        "motor development"
+      ],
+      "direction": "理解动作里程碑是大致序列而非竞赛，提供安全的自由移动与观察。"
+    },
+    {
+      "id": "development-v3-013",
+      "category": "development",
+      "title": "探索风险与安全边界",
+      "question": "怎样让孩子学会判断风险，而不是只听“危险”两个字？",
+      "keywords": [
+        "风险探索",
+        "risk play"
+      ],
+      "direction": "区分可管理的挑战与不可接受的危险，逐步让孩子参与判断。"
+    },
+    {
+      "id": "development-v3-014",
+      "category": "development",
+      "title": "“假想观众”：理解概念，也看理论争议",
+      "question": "青少年觉得大家都在看自己，就一定是认知偏差吗？",
+      "keywords": [
+        "假想观众",
+        "imaginary audience"
+      ],
+      "direction": "理解青春期自我意识增强与实际社会注意的区别，减少羞辱式安慰。"
+    },
+    {
+      "id": "development-v3-015",
+      "category": "development",
+      "title": "发展监测与筛查",
+      "question": "什么时候应该观察等待，什么时候应主动咨询？",
+      "keywords": [
+        "发展监测",
+        "developmental screening"
+      ],
+      "direction": "区分日常持续观察、标准化筛查和专业评估，及时回应退步与持续担忧。"
     },
     {
       "id": "parenting-006",
@@ -1107,28 +716,6 @@ window.SHIZHI_LIBRARY = {
       "direction": "区分可预测性与僵化，找一个需要解释调整的情境。"
     },
     {
-      "id": "parenting-008",
-      "category": "parenting",
-      "title": "自然与逻辑后果",
-      "question": "自然后果、逻辑后果和惩罚，有什么区别？",
-      "keywords": [
-        "自然与逻辑后果",
-        "natural logical consequences parenting"
-      ],
-      "direction": "用一个安全的生活场景比较，不让孩子承担危险后果。"
-    },
-    {
-      "id": "parenting-009",
-      "category": "parenting",
-      "title": "具体表扬",
-      "question": "怎样表扬，才能让孩子知道自己具体做对了什么？",
-      "keywords": [
-        "具体表扬",
-        "specific praise process praise"
-      ],
-      "direction": "比较人格标签与行为、策略及进步的反馈。"
-    },
-    {
       "id": "parenting-010",
       "category": "parenting",
       "title": "过程反馈",
@@ -1151,28 +738,6 @@ window.SHIZHI_LIBRARY = {
       "direction": "关注干预效果大小、环境支持与适用条件。"
     },
     {
-      "id": "parenting-012",
-      "category": "parenting",
-      "title": "游戏与发展",
-      "question": "自由游戏与有指导的游戏，各可能支持什么？",
-      "keywords": [
-        "游戏与发展",
-        "free play guided play development"
-      ],
-      "direction": "查不同发展目标，避免把游戏只当作学习工具。"
-    },
-    {
-      "id": "parenting-013",
-      "category": "parenting",
-      "title": "亲子阅读",
-      "question": "共读时怎样提问，能让孩子更多参与？",
-      "keywords": [
-        "亲子阅读",
-        "dialogic reading children"
-      ],
-      "direction": "查跟随兴趣、开放提问与回应扩展。"
-    },
-    {
       "id": "parenting-014",
       "category": "parenting",
       "title": "任务拆分",
@@ -1182,17 +747,6 @@ window.SHIZHI_LIBRARY = {
         "task analysis scaffolding children"
       ],
       "direction": "找一个整理书包或写作业的具体分解例子。"
-    },
-    {
-      "id": "parenting-015",
-      "category": "parenting",
-      "title": "脚手架",
-      "question": "帮助孩子时，怎样逐步把支持交还给他？",
-      "keywords": [
-        "脚手架",
-        "scaffolding zone of proximal development"
-      ],
-      "direction": "查示范、提示与逐渐撤除支持。"
     },
     {
       "id": "parenting-016",
@@ -1250,61 +804,6 @@ window.SHIZHI_LIBRARY = {
       "direction": "区分想象、记忆、回避后果与有意欺骗。"
     },
     {
-      "id": "parenting-021",
-      "category": "parenting",
-      "title": "分离焦虑",
-      "question": "孩子不愿分开，怎样结合发展阶段理解？",
-      "keywords": [
-        "分离焦虑",
-        "separation anxiety child development"
-      ],
-      "direction": "查正常发展中的变化与稳定告别流程。"
-    },
-    {
-      "id": "parenting-022",
-      "category": "parenting",
-      "title": "气质差异",
-      "question": "面对陌生环境，有的孩子慢热，有的主动，怎样理解？",
-      "keywords": [
-        "气质差异",
-        "child temperament goodness of fit"
-      ],
-      "direction": "查气质与环境的适配，避免贴固定性格标签。"
-    },
-    {
-      "id": "parenting-023",
-      "category": "parenting",
-      "title": "合作而非服从",
-      "question": "孩子愿意合作与只是害怕后果，行为上如何区分？",
-      "keywords": [
-        "合作而非服从",
-        "parent child cooperation compliance"
-      ],
-      "direction": "比较短期服从与长期理解规则的目标。"
-    },
-    {
-      "id": "parenting-024",
-      "category": "parenting",
-      "title": "家庭会议",
-      "question": "家庭会议怎样开，才让孩子有真实参与感？",
-      "keywords": [
-        "家庭会议",
-        "family meetings child participation"
-      ],
-      "direction": "查议题选择、轮流表达与共同检查方案。"
-    },
-    {
-      "id": "parenting-025",
-      "category": "parenting",
-      "title": "情绪词汇",
-      "question": "怎样帮助孩子把“不舒服”说得更具体？",
-      "keywords": [
-        "情绪词汇",
-        "emotion vocabulary children"
-      ],
-      "direction": "查情绪识别与命名，举一个不替孩子下结论的问法。"
-    },
-    {
       "id": "parenting-026",
       "category": "parenting",
       "title": "成人示范",
@@ -1360,664 +859,1159 @@ window.SHIZHI_LIBRARY = {
       "direction": "区分可承受挑战与过度压力，找一个分级支持的办法。"
     },
     {
-      "id": "reasoning-001",
-      "category": "reasoning",
-      "title": "相关与因果",
-      "question": "两件事一起变化，为什么不代表一件导致另一件？",
+      "id": "parenting-v3-006",
+      "category": "parenting",
+      "title": "用讲解检查孩子的理解",
+      "question": "孩子会背却说不清时，怎样用讲解找出理解缺口？",
       "keywords": [
-        "相关与因果",
-        "correlation causation confounding"
+        "费曼式讲解",
+        "learning by teaching explanation"
       ],
-      "direction": "找出共同原因、反向因果与巧合三种可能。"
+      "direction": "结合孩子的能力与家庭情境，选择一种可尝试的小调整。"
     },
     {
-      "id": "reasoning-002",
-      "category": "reasoning",
-      "title": "基准率",
-      "question": "判断一个个案时，为什么要先问整体发生率？",
+      "id": "parenting-v3-007",
+      "category": "parenting",
+      "title": "家庭练习中的针对性改进",
+      "question": "怎样陪孩子练一个薄弱环节，而不是反复刷整套题？",
       "keywords": [
-        "基准率",
-        "base rate neglect"
+        "刻意练习",
+        "deliberate practice feedback"
       ],
-      "direction": "用自然频数算一个简单例子，再比较直觉。"
+      "direction": "结合孩子的能力与家庭情境，选择一种可尝试的小调整。"
     },
     {
-      "id": "reasoning-003",
-      "category": "reasoning",
-      "title": "幸存者偏差",
-      "question": "只看留下来的人或事，会漏掉什么信息？",
+      "id": "parenting-v3-008",
+      "category": "parenting",
+      "title": "给孩子反馈的时机",
+      "question": "孩子出错时，应马上提醒还是先让他试完？",
       "keywords": [
-        "幸存者偏差",
-        "survivorship bias"
+        "反馈时机",
+        "feedback timing learning"
       ],
-      "direction": "找出样本中没出现的人，以及他们为什么没出现。"
+      "direction": "结合孩子的能力与家庭情境，选择一种可尝试的小调整。"
     },
     {
-      "id": "reasoning-004",
-      "category": "reasoning",
-      "title": "样本偏差",
-      "question": "问卷收到了很多回复，为什么仍可能不具代表性？",
+      "id": "parenting-v3-009",
+      "category": "parenting",
+      "title": "让孩子先试着生成答案",
+      "question": "先让孩子猜一猜，怎样才不会把错误记牢？",
       "keywords": [
-        "样本偏差",
-        "sampling bias nonresponse bias"
+        "生成效应",
+        "generation effect memory"
       ],
-      "direction": "查抽样方式、自愿参与与未回复人群。"
+      "direction": "结合孩子的能力与家庭情境，选择一种可尝试的小调整。"
     },
     {
-      "id": "reasoning-005",
-      "category": "reasoning",
-      "title": "平均数与中位数",
-      "question": "同一组数据，为什么平均数和中位数会讲不同的故事？",
+      "id": "parenting-v3-010",
+      "category": "parenting",
+      "title": "新课前的轻量预问",
+      "question": "还没学过的内容，可以先问孩子几个问题吗？",
       "keywords": [
-        "平均数与中位数",
-        "mean median skewed distribution"
+        "预先测试",
+        "pretesting effect learning"
       ],
-      "direction": "构造一组带极端值的小数据，亲手比较。"
+      "direction": "结合孩子的能力与家庭情境，选择一种可尝试的小调整。"
     },
     {
-      "id": "reasoning-006",
-      "category": "reasoning",
-      "title": "绝对与相对风险",
-      "question": "“风险下降一半”为什么还不够说明效果？",
+      "id": "parenting-v3-011",
+      "category": "parenting",
+      "title": "陪孩子压缩笔记",
+      "question": "怎样把一页笔记变成几个仍能解释清楚的要点？",
       "keywords": [
-        "绝对与相对风险",
-        "absolute relative risk reduction"
+        "笔记压缩",
+        "generative note taking"
       ],
-      "direction": "比较从百分之二到百分之一的相对和绝对变化。"
+      "direction": "结合孩子的能力与家庭情境，选择一种可尝试的小调整。"
     },
     {
-      "id": "reasoning-007",
-      "category": "reasoning",
-      "title": "分母意识",
-      "question": "看到“增长很多”，应该先追问什么？",
+      "id": "parenting-v3-012",
+      "category": "parenting",
+      "title": "和孩子一起画概念图",
+      "question": "孩子知道许多词，怎样帮助他把知识连起来？",
       "keywords": [
-        "分母意识",
-        "denominator base effect statistics"
+        "概念图",
+        "concept mapping learning"
       ],
-      "direction": "核对分母、时间窗口、单位与起点。"
+      "direction": "结合孩子的能力与家庭情境，选择一种可尝试的小调整。"
     },
     {
-      "id": "reasoning-008",
-      "category": "reasoning",
-      "title": "随机波动",
-      "question": "短期连续发生的结果，怎样区分趋势与波动？",
+      "id": "parenting-v3-013",
+      "category": "parenting",
+      "title": "活动与学习的家庭安排",
+      "question": "孩子坐不住时，怎样安排活动而不承诺“越运动越聪明”？",
       "keywords": [
-        "随机波动",
-        "random variation sample size"
+        "运动与学习",
+        "exercise cognition systematic review"
       ],
-      "direction": "比较小样本和大样本，查随机序列的聚集现象。"
+      "direction": "结合孩子的能力与家庭情境，选择一种可尝试的小调整。"
     },
     {
-      "id": "reasoning-009",
-      "category": "reasoning",
-      "title": "回归均值",
-      "question": "表现特别好或特别差之后，为什么常会回到中间？",
+      "id": "parenting-v3-014",
+      "category": "parenting",
+      "title": "和孩子一起理解错题",
+      "question": "怎样从错题找到下一步，而不是把错误归结为粗心？",
       "keywords": [
-        "回归均值",
-        "regression to the mean"
+        "错题归因",
+        "error analysis learning feedback"
       ],
-      "direction": "区分自然波动与干预效果，找一个测量例子。"
+      "direction": "结合孩子的能力与家庭情境，选择一种可尝试的小调整。"
     },
     {
-      "id": "reasoning-010",
-      "category": "reasoning",
-      "title": "赌徒谬误",
-      "question": "连续出现同一结果后，下次相反结果就更可能吗？",
+      "id": "parenting-v3-015",
+      "category": "parenting",
+      "title": "陪孩子设置学习目标",
+      "question": "怎样把“好好学习”变成孩子能参与的小目标？",
       "keywords": [
-        "赌徒谬误",
-        "gambler fallacy independent events"
+        "目标层级",
+        "process goals outcome goals learning"
       ],
-      "direction": "先确认事件是否独立，再讨论概率。"
+      "direction": "结合孩子的能力与家庭情境，选择一种可尝试的小调整。"
     },
     {
-      "id": "reasoning-011",
-      "category": "reasoning",
-      "title": "沉没成本",
-      "question": "已经花掉的时间和金钱，该怎样影响下一步选择？",
+      "id": "parenting-v3-001",
+      "category": "parenting",
+      "title": "共同养育的协作",
+      "question": "多位照护者怎样形成可执行的养育合作？",
       "keywords": [
-        "沉没成本",
-        "sunk cost decision making"
+        "共同养育的协作",
+        "coparenting"
       ],
-      "direction": "分别列出无法收回的成本与未来新增的成本收益。"
+      "direction": "区分原理、情境和适用边界，选择一个家庭中可执行的小行动。"
     },
     {
-      "id": "reasoning-012",
-      "category": "reasoning",
-      "title": "机会成本",
-      "question": "选择一件事时，真正放弃的是什么？",
+      "id": "parenting-v3-002",
+      "category": "parenting",
+      "title": "代际养育的协商",
+      "question": "和祖辈意见不同时，怎样保护孩子也尊重照护者？",
       "keywords": [
-        "机会成本",
-        "opportunity cost"
+        "代际养育的协商",
+        "intergenerational parenting"
       ],
-      "direction": "比较最好的可行替代方案，而不是所有没做的事。"
+      "direction": "区分原理、情境和适用边界，选择一个家庭中可执行的小行动。"
     },
     {
-      "id": "reasoning-013",
-      "category": "reasoning",
-      "title": "边际思考",
-      "question": "“再多做一点”与“要不要做”，为什么是不同的问题？",
+      "id": "parenting-v3-003",
+      "category": "parenting",
+      "title": "家长期待与孩子的自主",
+      "question": "怎样表达期待而不让孩子把成绩当成被爱的条件？",
       "keywords": [
-        "边际思考",
-        "marginal analysis decision"
+        "家长期待与孩子的自主",
+        "parental expectations"
       ],
-      "direction": "比较新增一单位的收益与成本。"
+      "direction": "区分原理、情境和适用边界，选择一个家庭中可执行的小行动。"
     },
     {
-      "id": "reasoning-014",
-      "category": "reasoning",
-      "title": "锚定效应",
-      "question": "先看到的数字，会怎样影响后面的估计？",
+      "id": "parenting-v3-004",
+      "category": "parenting",
+      "title": "儿童身体自主与同意",
+      "question": "怎样教孩子认识身体边界，并让求助真正有效？",
       "keywords": [
-        "锚定效应",
-        "anchoring effect"
+        "儿童身体自主与同意",
+        "bodily autonomy consent"
       ],
-      "direction": "查锚点是否有信息价值，并找一个减少影响的办法。"
+      "direction": "区分原理、情境和适用边界，选择一个家庭中可执行的小行动。"
     },
     {
-      "id": "reasoning-015",
-      "category": "reasoning",
-      "title": "框架效应",
-      "question": "同一结果换一种表述，为什么可能改变选择？",
+      "id": "parenting-v3-005",
+      "category": "parenting",
+      "title": "识别欺凌与支持求助",
+      "question": "孩子说被同伴欺负时，家长可以怎样了解并协同行动？",
       "keywords": [
-        "框架效应",
-        "framing effect decision"
+        "识别欺凌与支持求助",
+        "bullying prevention"
       ],
-      "direction": "比较得到与失去的表述，核对客观结果是否一致。"
+      "direction": "区分原理、情境和适用边界，选择一个家庭中可执行的小行动。"
     },
     {
-      "id": "reasoning-016",
-      "category": "reasoning",
-      "title": "证据等级",
-      "question": "个人故事、观察研究和随机试验，各能支持什么？",
+      "id": "parenting-008",
+      "category": "discipline",
+      "title": "自然与逻辑后果",
+      "question": "自然后果、逻辑后果和惩罚，有什么区别？",
       "keywords": [
-        "证据等级",
-        "evidence hierarchy research design"
+        "自然与逻辑后果",
+        "natural logical consequences parenting"
       ],
-      "direction": "查每种设计能排除什么解释及其限制。"
+      "direction": "用一个安全的生活场景比较，不让孩子承担危险后果。"
     },
     {
-      "id": "reasoning-017",
-      "category": "reasoning",
-      "title": "可证伪性",
-      "question": "一个说法怎样才有可能被证据推翻？",
+      "id": "parenting-009",
+      "category": "discipline",
+      "title": "具体表扬",
+      "question": "怎样表扬，才能让孩子知道自己具体做对了什么？",
       "keywords": [
-        "可证伪性",
-        "falsifiability hypothesis"
+        "具体表扬",
+        "specific praise process praise"
       ],
-      "direction": "为一个观点写出能支持和能反驳它的观察。"
+      "direction": "比较人格标签与行为、策略及进步的反馈。"
     },
     {
-      "id": "reasoning-018",
-      "category": "reasoning",
-      "title": "论点与证据",
-      "question": "一段说服性表达里，结论、理由和证据怎样区分？",
+      "id": "parenting-023",
+      "category": "discipline",
+      "title": "合作而非服从",
+      "question": "孩子愿意合作与只是害怕后果，行为上如何区分？",
       "keywords": [
-        "论点与证据",
-        "argument premises conclusion evidence"
+        "合作而非服从",
+        "parent child cooperation compliance"
       ],
-      "direction": "拆解一段文章，检查证据是否真的支持结论。"
+      "direction": "比较短期服从与长期理解规则的目标。"
     },
     {
-      "id": "reasoning-019",
-      "category": "reasoning",
-      "title": "稻草人论证",
-      "question": "把别人的观点改得更弱再反驳，问题在哪里？",
+      "id": "parenting-024",
+      "category": "discipline",
+      "title": "家庭会议",
+      "question": "家庭会议怎样开，才让孩子有真实参与感？",
       "keywords": [
-        "稻草人论证",
-        "straw man fallacy"
+        "家庭会议",
+        "family meetings child participation"
       ],
-      "direction": "先准确重述对方最有力的观点，再看反驳是否成立。"
+      "direction": "查议题选择、轮流表达与共同检查方案。"
     },
     {
-      "id": "reasoning-020",
-      "category": "reasoning",
-      "title": "错误两难",
-      "question": "“不是这样就是那样”，什么时候漏掉了选项？",
+      "id": "discipline-v3-001",
+      "category": "discipline",
+      "title": "和善与坚定",
+      "question": "在不羞辱孩子的前提下，怎样保持清晰而可靠的界限？",
       "keywords": [
-        "错误两难",
-        "false dilemma fallacy"
+        "和善与坚定",
+        "kind and firm parenting"
       ],
-      "direction": "找出至少一个可行的中间或替代方案。"
+      "direction": "把尊重语气与明确行动放在同一回应中。"
     },
     {
-      "id": "reasoning-021",
-      "category": "reasoning",
-      "title": "人身攻击",
-      "question": "评价提出观点的人，能代替评价观点本身吗？",
+      "id": "discipline-v3-002",
+      "category": "discipline",
+      "title": "归属与价值感",
+      "question": "日常管教怎样同时传达“你属于这里”和“你能做出贡献”？",
       "keywords": [
-        "人身攻击",
-        "ad hominem argument"
+        "归属感",
+        "belonging significance"
       ],
-      "direction": "区分与可信度相关的信息和无关的人格攻击。"
+      "direction": "从关系连接和真实贡献理解合作，而非用奖励购买表现。"
     },
     {
-      "id": "reasoning-022",
-      "category": "reasoning",
-      "title": "权威与证据",
-      "question": "专家的意见什么时候值得参考，还需要核对什么？",
+      "id": "discipline-v3-003",
+      "category": "discipline",
+      "title": "鼓励与评价",
+      "question": "怎样反馈才能支持孩子继续尝试，而不是只等大人的判分？",
       "keywords": [
-        "权威与证据",
-        "appeal to authority expertise"
+        "鼓励",
+        "encouragement vs praise"
       ],
-      "direction": "核对专业范围、证据、利益冲突与同行共识。"
+      "direction": "比较描述性反馈、评价性判断与鼓励的不同作用。"
     },
     {
-      "id": "reasoning-023",
-      "category": "reasoning",
-      "title": "因果图",
-      "question": "画出变量之间的箭头，怎样帮助发现混淆？",
+      "id": "discipline-v3-004",
+      "category": "discipline",
+      "title": "先连接后纠正",
+      "question": "孩子激动或犯错时，如何先恢复接触再讨论责任？",
       "keywords": [
-        "因果图",
-        "causal diagram confounder"
+        "先连接后纠正",
+        "connect before correct"
       ],
-      "direction": "用运动、健康与年龄画一个三变量关系图。"
+      "direction": "区分情绪承接、行为界限和事后教学三个时段。"
     },
     {
-      "id": "reasoning-024",
-      "category": "reasoning",
-      "title": "贝叶斯更新",
-      "question": "得到新证据后，怎样合理调整原来的判断？",
+      "id": "discipline-v3-005",
+      "category": "discipline",
+      "title": "积极暂停",
+      "question": "怎样设计一个让孩子可使用、而不是羞辱性的暂停空间？",
       "keywords": [
-        "贝叶斯更新",
-        "Bayesian updating prior likelihood"
+        "积极暂停",
+        "positive time-out"
       ],
-      "direction": "用简单频数理解先验、证据与后验，不必推复杂公式。"
+      "direction": "把暂停理解为恢复调节的机会，而非隔离惩罚。"
     },
     {
-      "id": "reasoning-025",
-      "category": "reasoning",
-      "title": "置信区间",
-      "question": "一个估计值旁边的区间，表达了什么不确定性？",
+      "id": "discipline-v3-006",
+      "category": "discipline",
+      "title": "有限选择",
+      "question": "怎样给出真实而不操控的两个选择？",
       "keywords": [
-        "置信区间",
-        "confidence interval interpretation"
+        "有限选择",
+        "limited choices"
       ],
-      "direction": "查重复抽样解释，避免误读成个体数据的范围。"
+      "direction": "选择必须可接受、可执行，并保留成人的安全责任。"
     },
     {
-      "id": "reasoning-026",
-      "category": "reasoning",
-      "title": "统计与实际意义",
-      "question": "一个结果统计上显著，就一定值得重视吗？",
+      "id": "discipline-v3-007",
+      "category": "discipline",
+      "title": "启发式提问",
+      "question": "什么时候问问题，什么时候应直接给出信息或界限？",
       "keywords": [
-        "统计与实际意义",
-        "statistical practical significance effect size"
+        "启发式提问",
+        "curious questions"
       ],
-      "direction": "比较样本量、效应大小和实际成本收益。"
+      "direction": "用开放而具体的问题帮助孩子观察影响与可能方案。"
     },
     {
-      "id": "reasoning-027",
-      "category": "reasoning",
-      "title": "多重比较",
-      "question": "同时尝试很多假设，为什么更容易偶然发现“有效”？",
+      "id": "discipline-v3-008",
+      "category": "discipline",
+      "title": "共同解决问题",
+      "question": "面对反复冲突时，怎样从“谁对谁错”转向共同方案？",
       "keywords": [
-        "多重比较",
-        "multiple comparisons false positives"
+        "共同解决问题",
+        "collaborative problem solving"
       ],
-      "direction": "查预注册、校正与独立重复验证的作用。"
+      "direction": "先收集双方关注，再定义可解决的小问题。"
     },
     {
-      "id": "reasoning-028",
-      "category": "reasoning",
-      "title": "测量效度",
-      "question": "一个指标变好了，就代表想改善的事情变好了吗？",
+      "id": "discipline-v3-009",
+      "category": "discipline",
+      "title": "错误是学习机会",
+      "question": "孩子出错后，成人如何兼顾责任、修复和继续尝试？",
       "keywords": [
-        "测量效度",
-        "construct validity Goodhart law"
+        "错误是学习机会",
+        "errors as learning"
       ],
-      "direction": "区分目标与代理指标，找一个指标被优化却偏离目标的例子。"
+      "direction": "错误提供信息，但不自动带来学习。"
     },
     {
-      "id": "reasoning-029",
-      "category": "reasoning",
-      "title": "决策可逆性",
-      "question": "做决定前，为什么要分清能否低成本撤回？",
+      "id": "discipline-v3-010",
+      "category": "discipline",
+      "title": "修复与补救",
+      "question": "道歉之外，怎样让受影响的人真正得到回应？",
       "keywords": [
-        "决策可逆性",
-        "reversible irreversible decisions"
+        "修复",
+        "repair and restitution"
       ],
-      "direction": "比较信息收集成本、试错成本与等待成本。"
+      "direction": "修复包含承认影响、补救行动和关系重建。"
     },
     {
-      "id": "reasoning-030",
-      "category": "reasoning",
-      "title": "反事实思考",
-      "question": "判断一项措施是否有效时，应该和什么比较？",
+      "id": "discipline-v3-011",
+      "category": "discipline",
+      "title": "例行惯例表",
+      "question": "怎样和孩子一起制定可看见、可调整的生活流程？",
       "keywords": [
-        "反事实思考",
-        "counterfactual causal inference"
+        "惯例表",
+        "routine charts"
       ],
-      "direction": "明确没有采取措施时可能怎样，查对照组的作用。"
+      "direction": "惯例是共同约定的顺序，不是用来监控人格的打分表。"
     },
     {
-      "id": "humanities-001",
-      "category": "humanities",
-      "title": "社会规范",
-      "question": "为什么有些规则没人明说，大家却会遵守？",
+      "id": "discipline-v3-012",
+      "category": "discipline",
+      "title": "特别时光",
+      "question": "怎样安排短而稳定的一对一连接时间？",
       "keywords": [
-        "社会规范",
-        "social norms descriptive injunctive"
+        "特别时光",
+        "special time"
       ],
-      "direction": "区分“别人通常怎样做”与“别人认为应该怎样做”。"
+      "direction": "稳定、可预期的关注比昂贵活动更重要。"
     },
     {
-      "id": "humanities-002",
-      "category": "humanities",
-      "title": "角色期待",
-      "question": "一个人换到不同身份时，为什么会有不同表现？",
+      "id": "discipline-v3-013",
+      "category": "discipline",
+      "title": "贡献与家务",
+      "question": "分配家务时如何考虑年龄、能力和共同责任？",
       "keywords": [
-        "角色期待",
-        "social roles role conflict"
+        "家务",
+        "contribution chores"
       ],
-      "direction": "找一个家庭和工作角色发生冲突的例子。"
+      "direction": "任务要具体、可学习，并让孩子看到对共同生活的作用。"
     },
     {
-      "id": "humanities-003",
-      "category": "humanities",
-      "title": "社会化",
-      "question": "我们关于“理所当然”的看法，怎样在成长中形成？",
+      "id": "discipline-v3-014",
+      "category": "discipline",
+      "title": "重做练习",
+      "question": "孩子违反约定后，如何让他重新演练可接受的做法？",
       "keywords": [
-        "社会化",
-        "socialization sociology"
+        "重做练习",
+        "redo practice"
       ],
-      "direction": "查家庭、同伴、学校与媒体的作用。"
+      "direction": "重做要短、具体、可选择，并在情绪稳定后进行。"
     },
     {
-      "id": "humanities-004",
-      "category": "humanities",
-      "title": "群体认同",
-      "question": "“我们”和“他们”的划分，会怎样影响判断？",
+      "id": "discipline-v3-015",
+      "category": "discipline",
+      "title": "少说多做",
+      "question": "怎样用环境和行动替代重复唠叨？",
       "keywords": [
-        "群体认同",
-        "social identity theory in group"
+        "少说多做",
+        "less talk more action"
       ],
-      "direction": "查内群体偏好及改变群体边界的情境。"
+      "direction": "简短提示、靠近和共同动作减少信息负荷。"
     },
     {
-      "id": "humanities-005",
-      "category": "humanities",
-      "title": "刻板印象",
-      "question": "对一个群体的概括，为什么不能直接套在个人身上？",
+      "id": "discipline-v3-016",
+      "category": "discipline",
+      "title": "非惩罚性界限",
+      "question": "明确限制时，如何同时保留关系、选择和后果？",
       "keywords": [
-        "刻板印象",
-        "stereotypes individual variation"
+        "非惩罚性界限",
+        "non-punitive limits"
       ],
-      "direction": "区分群体平均、内部差异与个人证据。"
+      "direction": "界限说明可接受行为和成人将采取的保护行动。"
     },
     {
-      "id": "humanities-006",
-      "category": "humanities",
-      "title": "文化相对视角",
-      "question": "理解不同文化的做法，是否意味着必须赞同？",
+      "id": "discipline-v3-017",
+      "category": "discipline",
+      "title": "避免权力争夺",
+      "question": "成人和孩子都提高音量时，如何把互动拉回问题解决？",
       "keywords": [
-        "文化相对视角",
-        "cultural relativism anthropology"
+        "权力争夺",
+        "power struggles"
       ],
-      "direction": "区分理解情境、事实描述与价值评价。"
+      "direction": "把“赢过孩子”改成守住安全和关系。"
     },
     {
-      "id": "humanities-007",
-      "category": "humanities",
-      "title": "制度与激励",
-      "question": "为什么改变规则，有时比要求个人自觉更有效？",
+      "id": "discipline-v3-018",
+      "category": "discipline",
+      "title": "行为背后目标",
+      "question": "怎样避免用猜测动机给孩子贴标签？",
       "keywords": [
-        "制度与激励",
-        "institutions incentives behavior"
+        "行为背后目标",
+        "goals of misbehavior"
       ],
-      "direction": "找一个激励与目标一致、一个相反的例子。"
+      "direction": "把目标当作待验证假设，优先观察可见线索。"
     },
     {
-      "id": "humanities-008",
-      "category": "humanities",
-      "title": "公共物品",
-      "question": "为什么有些大家都受益的东西，难以自发提供？",
+      "id": "discipline-v3-019",
+      "category": "discipline",
+      "title": "决定成人自己会做什么",
+      "question": "面对不合作时，怎样把要求改成成人可执行、负责任的行动？",
       "keywords": [
-        "公共物品",
-        "public goods free rider"
+        "决定自己会做什么",
+        "decide what you will do"
       ],
-      "direction": "查非排他性、非竞争性与搭便车问题。"
+      "direction": "把控制孩子的愿望改写为保护、支持与可兑现的成人行动。"
     },
     {
-      "id": "humanities-009",
-      "category": "humanities",
-      "title": "公地问题",
-      "question": "共享资源为什么有时会被过度使用？",
+      "id": "discipline-v3-020",
+      "category": "discipline",
+      "title": "合理期待",
+      "question": "孩子做不到时，如何调整任务而不降低尊重？",
       "keywords": [
-        "公地问题",
-        "commons collective action Ostrom"
+        "合理期待",
+        "developmentally appropriate expectations"
       ],
-      "direction": "同时查成功的社区治理，避免认为悲剧必然发生。"
+      "direction": "期待应与年龄、能力、情境和支持条件相匹配。"
     },
     {
-      "id": "humanities-010",
-      "category": "humanities",
-      "title": "外部性",
-      "question": "一个人的选择，怎样给没有参与交易的人带来影响？",
+      "id": "discipline-v3-021",
+      "category": "discipline",
+      "title": "预先教学与角色演练",
+      "question": "怎样在困难发生前，让孩子先练一遍可用的做法？",
       "keywords": [
-        "外部性",
-        "externalities positive negative"
+        "预先教学与角色演练",
+        "rehearsal"
       ],
-      "direction": "各找一个正外部性和负外部性的生活例子。"
+      "direction": "在困难发生前示范一项具体动作，并在真实现场继续提供支持。"
     },
     {
-      "id": "humanities-011",
-      "category": "humanities",
-      "title": "信息不对称",
-      "question": "交易双方知道的信息不同，会带来什么问题？",
+      "id": "discipline-v3-022",
+      "category": "discipline",
+      "title": "私下纠正与保护尊严",
+      "question": "孩子当众出现不当行为时，怎样制止又避免羞辱？",
       "keywords": [
-        "信息不对称",
-        "information asymmetry adverse selection"
+        "私下纠正与保护尊严",
+        "private correction"
       ],
-      "direction": "区分逆向选择与道德风险，用生活场景说明。"
+      "direction": "先制止危险，再减少围观与羞辱，私下讨论影响和替代动作。"
     },
     {
-      "id": "humanities-012",
-      "category": "humanities",
-      "title": "信任与合作",
-      "question": "在没有人监督的情况下，合作可能怎样维持？",
+      "id": "discipline-v3-023",
+      "category": "discipline",
+      "title": "邀请式语言",
+      "question": "怎样邀请孩子合作，同时把不能选择的部分说清？",
       "keywords": [
-        "信任与合作",
-        "cooperation repeated games trust"
+        "邀请式语言",
+        "inviting cooperation"
       ],
-      "direction": "查重复互动、声誉与规则的作用。"
+      "direction": "用清楚理由、真实参与和具体动作邀请合作，不把假选择伪装成协商。"
     },
     {
-      "id": "humanities-013",
-      "category": "humanities",
-      "title": "议程设置",
-      "question": "媒体如何影响我们觉得“什么事值得关注”？",
+      "id": "discipline-v3-024",
+      "category": "discipline",
+      "title": "撤销威胁后重新约定",
+      "question": "家长已经说出过重的惩罚时，怎样修正而不放弃边界？",
       "keywords": [
-        "议程设置",
-        "agenda setting media"
+        "撤销威胁后重新约定",
+        "revising threats"
       ],
-      "direction": "区分影响关注的议题与直接决定人的立场。"
+      "direction": "承认并撤回不合理威胁，同时保留安全界限和可行补救。"
     },
     {
-      "id": "humanities-014",
-      "category": "humanities",
-      "title": "信息茧房",
-      "question": "个性化信息会怎样影响接触观点的范围？",
+      "id": "discipline-v3-025",
+      "category": "discipline",
+      "title": "选择工具与停止无效方法",
+      "question": "育儿方法用了没帮助时，怎样调整而不是越用越重？",
       "keywords": [
-        "信息茧房",
-        "filter bubble echo chamber evidence"
+        "选择工具与停止无效方法",
+        "adapting parenting strategies"
       ],
-      "direction": "查概念区别与实证争议，不把算法当作唯一原因。"
+      "direction": "依据问题、能力与安全选择工具，停止增加恐惧或无效的方法。"
     },
     {
-      "id": "humanities-015",
-      "category": "humanities",
-      "title": "叙事说服",
-      "question": "为什么一个具体故事，有时比一组数据更有说服力？",
+      "id": "discipline-v3-026",
+      "category": "discipline",
+      "title": "观察合作中的小进展",
+      "question": "怎样判断孩子正在学习合作，而不只看是否马上听话？",
       "keywords": [
-        "叙事说服",
-        "narrative persuasion transportation"
+        "观察合作中的小进展",
+        "observing cooperation"
       ],
-      "direction": "区分容易被理解、情绪投入与事实可靠。"
+      "direction": "观察求助、参与和策略变化，把成人支持也纳入合作进展。"
     },
     {
-      "id": "humanities-016",
-      "category": "humanities",
-      "title": "历史情境",
-      "question": "理解一件历史事件时，为什么不能只用今天的常识？",
+      "id": "communication-v3-001",
+      "category": "communication",
+      "title": "亲子积极倾听",
+      "question": "在亲子交流中，怎样让对方知道自己被理解，而不急着给建议？",
       "keywords": [
-        "历史情境",
-        "historical context presentism"
+        "积极倾听",
+        "active listening reflective listening"
       ],
-      "direction": "查当时可用的信息、制度与选择，不取消道德讨论。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-017",
-      "category": "humanities",
-      "title": "一手与二手资料",
-      "question": "研究一个问题时，原始记录和后来的解释各有什么用？",
+      "id": "communication-v3-002",
+      "category": "communication",
+      "title": "亲子感受与判断",
+      "question": "在亲子交流中，“我很难过”和“你不在乎我”，表达上有什么区别？",
       "keywords": [
-        "一手与二手资料",
-        "primary secondary sources history"
+        "感受与判断",
+        "feelings judgments communication"
       ],
-      "direction": "关注作者、时间、目的与交叉核对。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-018",
-      "category": "humanities",
-      "title": "历史因果",
-      "question": "一个重大变化，为什么常常不能用单一原因解释？",
+      "id": "communication-v3-003",
+      "category": "communication",
+      "title": "亲子我信息",
+      "question": "在亲子交流中，表达不满时，“我信息”怎样说才不变相指责？",
       "keywords": [
-        "历史因果",
-        "historical causation multiple causes"
+        "我信息",
+        "I statements communication"
       ],
-      "direction": "区分长期条件、触发事件与参与者的选择。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-019",
-      "category": "humanities",
-      "title": "功利主义",
-      "question": "只看总体结果来判断行动，会遇到哪些难题？",
+      "id": "communication-v3-004",
+      "category": "communication",
+      "title": "亲子开放式提问",
+      "question": "在亲子交流中，怎样提问，更容易得到具体而有用的信息？",
       "keywords": [
-        "功利主义",
-        "utilitarianism ethics"
+        "开放式提问",
+        "open ended questions communication"
       ],
-      "direction": "查幸福的衡量、少数人权益与后果的不确定性。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-020",
-      "category": "humanities",
-      "title": "义务伦理",
-      "question": "为什么有些伦理观点认为某些原则不能只看结果？",
+      "id": "communication-v3-005",
+      "category": "communication",
+      "title": "亲子澄清与假设",
+      "question": "在亲子交流中，不确定对方意思时，如何核对而不直接下结论？",
       "keywords": [
-        "义务伦理",
-        "deontological ethics Kant"
+        "澄清与假设",
+        "perception checking communication"
       ],
-      "direction": "比较原则、责任与冲突义务。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-021",
-      "category": "humanities",
-      "title": "德性伦理",
-      "question": "评价一个行动时，关注“成为什么样的人”有何不同？",
+      "id": "communication-v3-006",
+      "category": "communication",
+      "title": "亲子心理边界",
+      "question": "在亲子交流中，设立边界和要求别人服从，有什么区别？",
       "keywords": [
-        "德性伦理",
-        "virtue ethics Aristotle"
+        "心理边界",
+        "personal boundaries assertiveness"
       ],
-      "direction": "查德性、实践智慧与具体情境。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-022",
-      "category": "humanities",
-      "title": "关怀伦理",
-      "question": "把关系和照顾放在伦理思考中心，会关注什么？",
+      "id": "communication-v3-007",
+      "category": "communication",
+      "title": "亲子坚定表达",
+      "question": "在亲子交流中，坚定、被动与攻击性的表达，怎样区分？",
       "keywords": [
-        "关怀伦理",
-        "care ethics"
+        "坚定表达",
+        "assertive passive aggressive communication"
       ],
-      "direction": "比较具体关系、依赖与普遍规则。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-023",
-      "category": "humanities",
-      "title": "公平与平等",
-      "question": "给所有人一样的东西，就一定公平吗？",
+      "id": "communication-v3-008",
+      "category": "communication",
+      "title": "亲子请求与要求",
+      "question": "在亲子交流中，一个请求，在什么情况下会被听成命令？",
       "keywords": [
-        "公平与平等",
-        "equality equity justice"
+        "请求与要求",
+        "requests demands nonviolent communication"
       ],
-      "direction": "比较机会、资源、需求与结果这几种标准。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-024",
-      "category": "humanities",
-      "title": "自由的两种理解",
-      "question": "“不被干涉”和“有能力实现选择”，有什么区别？",
+      "id": "communication-v3-009",
+      "category": "communication",
+      "title": "亲子事实与解读",
+      "question": "在亲子交流中，沟通冲突中，怎样把观察到的事实与解释分开？",
       "keywords": [
-        "自由的两种理解",
-        "negative positive liberty"
+        "事实与解读",
+        "observation interpretation communication"
       ],
-      "direction": "查消极自由与积极自由，找一个生活例子。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-025",
-      "category": "humanities",
-      "title": "知识与信念",
-      "question": "相信一件事和知道一件事，有什么差别？",
+      "id": "communication-010",
+      "category": "communication",
+      "title": "情绪确认",
+      "question": "承认对方的感受，是否等于同意对方的观点？",
       "keywords": [
-        "知识与信念",
-        "epistemology knowledge belief justification"
+        "情绪确认",
+        "emotional validation agreement"
       ],
-      "direction": "查理由、真与信念的关系及经典反例。"
+      "direction": "比较确认体验、赞同行为与纵容行为。"
     },
     {
-      "id": "humanities-026",
-      "category": "humanities",
-      "title": "怀疑的尺度",
-      "question": "合理怀疑与“什么都不相信”，怎样区分？",
+      "id": "communication-v3-011",
+      "category": "communication",
+      "title": "亲子冲突暂停",
+      "question": "在亲子交流中，争执中暂时离开，怎样才不会变成冷处理？",
       "keywords": [
-        "怀疑的尺度",
-        "skepticism epistemic justification"
+        "冲突暂停",
+        "conflict time out return agreement"
       ],
-      "direction": "比较证据标准与可修正的信念。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-027",
-      "category": "humanities",
-      "title": "语言与分类",
-      "question": "给现象起一个名字，会怎样影响我们注意到什么？",
+      "id": "communication-v3-012",
+      "category": "communication",
+      "title": "亲子修复尝试",
+      "question": "在亲子交流中，一次争吵中，哪些小动作可能帮助恢复合作？",
       "keywords": [
-        "语言与分类",
-        "categorization language concepts"
+        "修复尝试",
+        "repair attempts relationship conflict"
       ],
-      "direction": "找一个分类帮助理解、又遮蔽差异的例子。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-028",
-      "category": "humanities",
-      "title": "技术与价值",
-      "question": "一项技术是否只是一件中立的工具？",
+      "id": "communication-v3-013",
+      "category": "communication",
+      "title": "亲子道歉的组成",
+      "question": "在亲子交流中，什么样的道歉更容易让人感到责任被承担？",
       "keywords": [
-        "技术与价值",
-        "philosophy technology values design"
+        "道歉的组成",
+        "effective apology responsibility repair"
       ],
-      "direction": "查设计中的默认选项、取舍与使用情境。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-029",
-      "category": "humanities",
-      "title": "劳动分工",
-      "question": "分工怎样提升效率，又会产生哪些协调问题？",
+      "id": "communication-v3-014",
+      "category": "communication",
+      "title": "亲子建议前征询",
+      "question": "在亲子交流中，给建议前先问一句，可能怎样改变交流？",
       "keywords": [
-        "劳动分工",
-        "division of labor coordination"
+        "建议前征询",
+        "unsolicited advice autonomy support"
       ],
-      "direction": "比较专业化收益、依赖关系与信息传递成本。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
     },
     {
-      "id": "humanities-030",
-      "category": "humanities",
-      "title": "城市公共空间",
-      "question": "一块公共空间的设计，怎样影响人与人的相遇？",
+      "id": "communication-v3-015",
+      "category": "communication",
+      "title": "亲子共同问题",
+      "question": "在亲子交流中，怎样把“你对我错”改成双方一起解决的问题？",
       "keywords": [
-        "城市公共空间",
-        "public space urban sociology"
+        "共同问题",
+        "collaborative problem solving conflict"
       ],
-      "direction": "观察可进入性、停留条件与不同人群的使用方式。"
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-016",
+      "category": "communication",
+      "title": "亲子意图与影响",
+      "question": "在亲子交流中，“我不是那个意思”为什么未必能解决冲突？",
+      "keywords": [
+        "意图与影响",
+        "intent impact communication"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-017",
+      "category": "communication",
+      "title": "亲子归因与关系",
+      "question": "在亲子交流中，如何避免把一次失约上升为“你从来不在乎”？",
+      "keywords": [
+        "归因与关系",
+        "relationship attribution overgeneralization"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-018",
+      "category": "communication",
+      "title": "亲子反馈的具体性",
+      "question": "在亲子交流中，为什么“你要积极一点”常常难以执行？",
+      "keywords": [
+        "反馈的具体性",
+        "specific behavioral feedback"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-019",
+      "category": "communication",
+      "title": "亲子倾听中的沉默",
+      "question": "在亲子交流中，对话里留一点沉默，什么时候有帮助？",
+      "keywords": [
+        "倾听中的沉默",
+        "silence listening communication"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-020",
+      "category": "communication",
+      "title": "亲子信任修复",
+      "question": "在亲子交流中，信任被破坏后，语言和行动分别有什么作用？",
+      "keywords": [
+        "信任修复",
+        "trust repair consistency accountability"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-021",
+      "category": "communication",
+      "title": "亲子关系中的自主",
+      "question": "在亲子交流中，亲密关系中，怎样同时保留联结与自主？",
+      "keywords": [
+        "关系中的自主",
+        "autonomy relatedness relationships"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-022",
+      "category": "communication",
+      "title": "亲子协商底线",
+      "question": "在亲子交流中，讨论分歧前，怎样分清立场、利益和底线？",
+      "keywords": [
+        "协商底线",
+        "principled negotiation interests positions"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-023",
+      "category": "communication",
+      "title": "亲子文字误读",
+      "question": "在亲子交流中，为什么同一句话在聊天软件里更容易被误解？",
+      "keywords": [
+        "文字误读",
+        "text communication tone ambiguity"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-024",
+      "category": "communication",
+      "title": "亲子拒绝与解释",
+      "question": "在亲子交流中，拒绝别人时，解释越多就一定越好吗？",
+      "keywords": [
+        "拒绝与解释",
+        "assertive refusal boundaries"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-025",
+      "category": "communication",
+      "title": "亲子共情边界",
+      "question": "在亲子交流中，理解别人的感受，怎样避免把所有责任揽到自己身上？",
+      "keywords": [
+        "共情边界",
+        "empathy compassion boundaries"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-026",
+      "category": "communication",
+      "title": "亲子防御反应",
+      "question": "在亲子交流中，受到批评时，为什么容易先解释而不是先理解？",
+      "keywords": [
+        "防御反应",
+        "defensiveness criticism communication"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-027",
+      "category": "communication",
+      "title": "亲子关系中的公平",
+      "question": "在亲子交流中，关系里的公平，是否一定意味着双方付出相同？",
+      "keywords": [
+        "关系中的公平",
+        "equity equality relationship"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-028",
+      "category": "communication",
+      "title": "亲子低冲突开场",
+      "question": "在亲子交流中，提出一个难谈的话题时，怎样开头更清楚？",
+      "keywords": [
+        "低冲突开场",
+        "soft start up conflict conversation"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-029",
+      "category": "communication",
+      "title": "亲子建议与追问",
+      "question": "在亲子交流中，对方说“我不想做了”时，先问什么更有帮助？",
+      "keywords": [
+        "建议与追问",
+        "supportive communication advice questions"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "communication-v3-030",
+      "category": "communication",
+      "title": "亲子分歧中的复述",
+      "question": "在亲子交流中，能准确复述对方观点，为什么可能改善讨论？",
+      "keywords": [
+        "分歧中的复述",
+        "perspective taking paraphrasing disagreement"
+      ],
+      "direction": "结合孩子的年龄与能力，理解表达方法及其边界。"
+    },
+    {
+      "id": "psychology-002",
+      "category": "support",
+      "title": "思想抑制",
+      "question": "越想不去想一件事，为什么反而想得更多？",
+      "keywords": [
+        "思想抑制",
+        "thought suppression ironic process"
+      ],
+      "direction": "查找白熊实验，并留意实验情境与日常生活的区别。"
+    },
+    {
+      "id": "psychology-004",
+      "category": "support",
+      "title": "情绪命名",
+      "question": "把感受说清楚，为什么可能帮助调节情绪？",
+      "keywords": [
+        "情绪命名",
+        "affect labeling"
+      ],
+      "direction": "区分给情绪命名与压抑情绪，查找相关实验。"
+    },
+    {
+      "id": "psychology-005",
+      "category": "support",
+      "title": "认知重评",
+      "question": "同一件事换一种理解，会怎样影响情绪？",
+      "keywords": [
+        "认知重评",
+        "cognitive reappraisal"
+      ],
+      "direction": "比较认知重评与表达抑制，并各举一个例子。"
+    },
+    {
+      "id": "psychology-020",
+      "category": "support",
+      "title": "自我同情",
+      "question": "善待自己和给自己找借口，有什么区别？",
+      "keywords": [
+        "自我同情",
+        "self compassion accountability"
+      ],
+      "direction": "查概念的组成，找一个承认责任又减少苛责的例子。"
+    },
+    {
+      "id": "psychology-021",
+      "category": "support",
+      "title": "情绪与身体",
+      "question": "身体感觉如何参与我们对情绪的理解？",
+      "keywords": [
+        "情绪与身体",
+        "interoception emotion"
+      ],
+      "direction": "区分身体唤醒、情境解释与情绪体验。"
+    },
+    {
+      "id": "psychology-022",
+      "category": "support",
+      "title": "压力评价",
+      "question": "为什么同一项任务，有人视为挑战，有人视为威胁？",
+      "keywords": [
+        "压力评价",
+        "stress appraisal challenge threat"
+      ],
+      "direction": "查初级评价、次级评价及可用资源的作用。"
+    },
+    {
+      "id": "psychology-023",
+      "category": "support",
+      "title": "睡眠与情绪",
+      "question": "睡眠不足可能怎样影响情绪调节？",
+      "keywords": [
+        "睡眠与情绪",
+        "sleep deprivation emotion regulation"
+      ],
+      "direction": "关注研究设计，不把相关关系直接当成因果。"
+    },
+    {
+      "id": "psychology-028",
+      "category": "support",
+      "title": "情绪预测",
+      "question": "我们预测未来感受时，容易出现什么误差？",
+      "keywords": [
+        "情绪预测",
+        "affective forecasting impact bias"
+      ],
+      "direction": "查影响偏差，想想预测时遗漏了哪些日常因素。"
+    },
+    {
+      "id": "parenting-001",
+      "category": "support",
+      "title": "共同调节",
+      "question": "孩子情绪激动时，成人的稳定能起什么作用？",
+      "keywords": [
+        "共同调节",
+        "co regulation children emotions"
+      ],
+      "direction": "区分先帮助平复与随后讲规则，留意年龄差异。"
+    },
+    {
+      "id": "parenting-002",
+      "category": "support",
+      "title": "情绪教养",
+      "question": "接纳孩子的情绪，和允许所有行为有什么区别？",
+      "keywords": [
+        "情绪教养",
+        "emotion coaching limits parenting"
+      ],
+      "direction": "比较确认感受、限制行为与提供替代行为。"
+    },
+    {
+      "id": "parenting-025",
+      "category": "support",
+      "title": "情绪词汇",
+      "question": "怎样帮助孩子把“不舒服”说得更具体？",
+      "keywords": [
+        "情绪词汇",
+        "emotion vocabulary children"
+      ],
+      "direction": "查情绪识别与命名，举一个不替孩子下结论的问法。"
+    },
+    {
+      "id": "support-v3-001",
+      "category": "support",
+      "title": "ABC 行为观察",
+      "question": "一次冲突发生前后，哪些事实能帮助我们理解行为？",
+      "keywords": [
+        "ABC行为观察",
+        "antecedent behavior consequence"
+      ],
+      "direction": "分开记录前因、可观察行为和紧接其后的结果，不把解释写成事实。"
+    },
+    {
+      "id": "support-v3-002",
+      "category": "support",
+      "title": "行为功能的工作假设",
+      "question": "同样是大喊，为什么可能需要不同的支持？",
+      "keywords": [
+        "行为功能",
+        "function of behavior"
+      ],
+      "direction": "把行为可能获得或避开的事情视为可修正假设，寻找可接受的替代途径。"
+    },
+    {
+      "id": "support-v3-003",
+      "category": "support",
+      "title": "过渡预告与收尾支持",
+      "question": "从正在投入的活动转向下一件事，怎样降低突兀感？",
+      "keywords": [
+        "活动过渡",
+        "transition support"
+      ],
+      "direction": "把提前知道、能够收尾和明白下一步连起来，不把预告当作催促的包装。"
+    },
+    {
+      "id": "support-v3-004",
+      "category": "support",
+      "title": "替代行为的教学",
+      "question": "告诉孩子“不要这样”之后，还需要教会什么？",
+      "keywords": [
+        "替代行为",
+        "replacement behavior"
+      ],
+      "direction": "让替代动作安全、可行并能满足合理需要，在平静时示范和练习。"
+    },
+    {
+      "id": "support-v3-005",
+      "category": "support",
+      "title": "愤怒的安全表达",
+      "question": "生气时可以保留哪些表达，又必须限制哪些动作？",
+      "keywords": [
+        "愤怒表达",
+        "anger safe expression"
+      ],
+      "direction": "区别感受、冲动和行动，练习能保护自己与别人的表达方式。"
+    },
+    {
+      "id": "support-v3-006",
+      "category": "support",
+      "title": "担忧阶梯与逐步面对",
+      "question": "如何陪孩子理解担忧，而不是强迫他立刻勇敢？",
+      "keywords": [
+        "担忧阶梯",
+        "graded approach anxiety"
+      ],
+      "direction": "把担忧拆成可讨论的小步，尊重选择并与专业支持边界相连，不自行做暴露治疗。"
+    },
+    {
+      "id": "support-v3-007",
+      "category": "support",
+      "title": "感官负荷与环境调整",
+      "question": "孩子行为突然失控时，环境中的声音、光线和触感可能扮演什么角色？",
+      "keywords": [
+        "感官负荷",
+        "sensory overload"
+      ],
+      "direction": "先降低不必要刺激并观察个体差异，不把感官偏好等同于诊断。"
+    },
+    {
+      "id": "support-v3-008",
+      "category": "support",
+      "title": "照护者的降温",
+      "question": "成人快要被孩子的情绪带着升级时，怎样先恢复自己的行动能力？",
+      "keywords": [
+        "照护者降温",
+        "caregiver regulation"
+      ],
+      "direction": "降温是为了安全和清晰行动，不把成人平静变成要求孩子立即平静的工具。"
+    },
+    {
+      "id": "support-v3-009",
+      "category": "support",
+      "title": "回避维持循环",
+      "question": "孩子总是躲开某件事时，怎样同时看见暂时缓解和长期代价？",
+      "keywords": [
+        "回避循环",
+        "avoidance cycle"
+      ],
+      "direction": "理解回避的短期作用，先查真实威胁与能力负担，再选择小而可退的支持。"
+    },
+    {
+      "id": "support-v3-010",
+      "category": "support",
+      "title": "拒学的初步理解",
+      "question": "孩子不愿上学时，家长先问哪些问题才不会把它简化为懒惰？",
+      "keywords": [
+        "拒学",
+        "school refusal"
+      ],
+      "direction": "把不上学视为需要理解的信号，联络学校和专业支持，避免强行拖拽或自行诊断。"
+    },
+    {
+      "id": "support-v3-011",
+      "category": "support",
+      "title": "攻击行为的安全界限",
+      "question": "出现推打、踢咬时，怎样先保护人，再教会下一步？",
+      "keywords": [
+        "攻击行为安全",
+        "aggression safety"
+      ],
+      "direction": "接纳感受不等于允许伤害；安全处置、恢复和学习按次序进行。"
+    },
+    {
+      "id": "support-v3-012",
+      "category": "support",
+      "title": "情绪恢复后的复盘",
+      "question": "冲突结束后，怎样回顾才会增加下一次可用的办法？",
+      "keywords": [
+        "情绪复盘",
+        "post incident review"
+      ],
+      "direction": "等到能够交谈，再用事实、线索、支持和下一步进行短回顾，避免审讯。"
+    },
+    {
+      "id": "support-v3-013",
+      "category": "support",
+      "title": "情绪升级的早期信号",
+      "question": "怎样在爆发前看见线索，又不把孩子全天当成预警对象？",
+      "keywords": [
+        "情绪信号",
+        "early warning signs"
+      ],
+      "direction": "用孩子自己的身体、想法和行动线索确定求助时点，避免贴标签与过度监控。"
+    },
+    {
+      "id": "support-v3-014",
+      "category": "support",
+      "title": "舒适呼吸练习",
+      "question": "紧张时怎样尝试舒适呼吸，并知道什么时候不该只靠练习？",
+      "keywords": [
+        "舒适呼吸",
+        "comfortable breathing"
+      ],
+      "direction": "在自愿、舒适和不过度用力的前提下试用呼吸方法；持续身体不适先就医。"
+    },
+    {
+      "id": "support-v3-015",
+      "category": "support",
+      "title": "孩子的求助计划",
+      "question": "孩子难受或遇到危险时，怎样知道可以找谁、怎样开口？",
+      "keywords": [
+        "求助计划",
+        "help seeking safety plan"
+      ],
+      "direction": "把可信任的人、信号、回应和备用途径连起来，不让儿童独自承担安全责任。"
+    },
+    {
+      "id": "support-v3-016",
+      "category": "support",
+      "title": "反复确认与安慰循环",
+      "question": "孩子一遍遍问“真的不会有事吗”，怎样回应既温暖又不陷入无限保证？",
+      "keywords": [
+        "反复确认",
+        "reassurance seeking"
+      ],
+      "direction": "区分获取新信息与暂时缓解担忧，保留联系并提供可用行动，严重时求助。"
+    },
+    {
+      "id": "support-v3-017",
+      "category": "support",
+      "title": "放学后的减负缓冲",
+      "question": "孩子在学校看起来稳定，回家却容易崩溃，怎样理解和安排过渡？",
+      "keywords": [
+        "放学后缓冲",
+        "after school decompression"
+      ],
+      "direction": "把回家视为负荷变化的时段，先满足基本需要，再讨论任务，不据此给孩子贴标签。"
+    },
+    {
+      "id": "support-v3-018",
+      "category": "support",
+      "title": "行为变化中的身体不适线索",
+      "question": "孩子突然易怒、退缩或拒绝活动时，为什么也要想到健康因素？",
+      "keywords": [
+        "身体不适与行为",
+        "pain behavior change"
+      ],
+      "direction": "把疼痛与健康变化纳入考虑，先就医核实可疑症状，不用心理解释覆盖身体需求。"
+    },
+    {
+      "id": "support-v3-019",
+      "category": "support",
+      "title": "个人应对工具箱",
+      "question": "同一个办法有时有用、有时无效，怎样和孩子建立可选择的调节工具？",
+      "keywords": [
+        "应对工具箱",
+        "coping toolkit"
+      ],
+      "direction": "少量、可选、可试用的工具与不同情境匹配，环境调整和成人支持也算工具。"
     }
   ]
 };

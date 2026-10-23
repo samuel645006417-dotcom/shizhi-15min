@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f3f5f3">
-  <meta name="description" content="随机抽取一个知识点，直接阅读原创讲解。六类 180 篇，留 15 分钟理解与归纳，无需注册。">
+  <meta name="description" content="心理学与家庭教育知识抽签：六类180题，先读理论点，再看应用实践。15分钟直接学习，无需注册。">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="拾知">
   <meta name="referrer" content="no-referrer">
-  <meta name="application-version" content="2.0.0-reading">
+  <meta name="application-version" content="3.0.0-family">
   <title>拾知 · 15 分钟知识抽签</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-  <link rel="stylesheet" href="./style.css">
-  <script src="./library.js" defer></script>
-  <script src="./articles.js" defer></script>
-  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="./style.css?v=3.0.0-family">
+  <script src="./library.js?v=3.0.0-family" defer></script>
+  <script src="./articles.js?v=3.0.0-family" defer></script>
+  <script src="./app.js?v=3.0.0-family" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -32,7 +32,7 @@
 
   <main class="workspace">
     <div class="page-title">
-      <div><h1>给好奇心，留一刻钟。</h1><p>抽一个知识点，直接读懂，再用自己的话记下来。</p></div>
+      <div><h1>读懂孩子，也读懂自己。</h1><p>每天一刻钟，从心理学到家庭里的具体行动。</p></div>
       <span id="remaining" class="remaining"></span>
     </div>
 
@@ -41,9 +41,9 @@
       <article class="question-panel" aria-labelledby="card-heading">
         <div id="welcome">
           <div class="card-top"><span>六类知识 · 随机抽取</span><span>每次一个问题</span></div>
-          <h2 id="card-heading">今天，探索哪一个<br>小问题？</h2>
-          <p class="welcome-text">抽到后就能读到完整讲解。<br>解释、例子、应用与边界，都在这里。</p>
-          <div class="category-cloud" aria-label="题库类别"><span>心理学</span><span>学习方法</span><span>沟通与关系</span><span>家庭教育</span><span>逻辑与判断</span><span>人文与社会</span></div>
+          <h2 id="card-heading">今天，理解哪一个<br>亲子小问题？</h2>
+          <p class="welcome-text">先读理论点，再看应用实践。<br>抽到就能学，笔记由你单独记录。</p>
+          <div class="category-cloud" aria-label="题库类别"><span>心理学基础</span><span>儿童发展</span><span>家庭教育</span><span>正面管教</span><span>亲子沟通</span><span>情绪与行为支持</span></div>
           <button id="draw-first" class="primary draw-button">抽取一个知识点 <span aria-hidden="true">↗</span></button>
           <p class="card-footnote">完成的题目会自动避开，随时可以换一题。</p>
         </div>
@@ -59,10 +59,18 @@
             <div id="timer-progress" class="timer-track" role="progressbar" aria-label="学习时间进度" aria-valuemin="0" aria-valuemax="900" aria-valuenow="0"><span id="timer-fill"></span></div>
             <p id="timer-hint" class="small">先抽一个知识点，再开始计时。</p>
           </section>
-          <div id="article-content" class="article-content"></div>
+          <div id="reading-card" class="reading-card">
+            <nav class="card-view-nav" aria-label="本题学习卡片">
+              <button id="view-theory" class="view-button" aria-pressed="true" aria-controls="article-content">理论点</button>
+              <button id="view-practice" class="view-button" aria-pressed="false" aria-controls="article-content">看应用实践</button>
+            </nav>
+            <div class="reading-card-heading"><h3 id="reading-card-title" tabindex="-1">理论点</h3><span id="reading-card-position">1 / 2</span></div>
+            <div id="article-content" class="article-content" aria-labelledby="reading-card-title"></div>
+          </div>
           <section class="takeaway" aria-labelledby="takeaway-heading"><h3 id="takeaway-heading">记住这一点</h3><p id="takeaway-text"></p></section>
-          <section class="article-reflection" aria-labelledby="article-reflection-heading"><h3 id="article-reflection-heading">留给你的笔记</h3><p id="article-reflection-text"></p><p class="small">在自己的本子或笔记应用里记下想法即可。</p></section>
-          <details class="article-sources"><summary>参考来源与延伸阅读</summary><p class="small">正文为原创讲解；生活案例用于说明。以下资料供核查概念或继续阅读，无需打开也可完成本次学习。</p><ul id="article-sources"></ul></details>
+          <section id="article-reflection" class="article-reflection" aria-labelledby="article-reflection-heading"><h3 id="article-reflection-heading">留给你的笔记</h3><p id="article-reflection-text"></p><p class="small">在自己的本子或笔记应用里记下想法即可。</p></section>
+          <details class="article-sources"><summary>理论依据与参考来源</summary><p class="small">理论依据见下方资料。实践部分为通用操作建议和示例话语，并非真实个案或效果证明；不能把建议视为对每个孩子都有效的结论。</p><ul id="article-sources"></ul></details>
+          <button id="card-switch" class="secondary card-switch">看应用实践 →</button>
           <div class="card-actions"><button id="complete" class="secondary">标记已完成</button><button id="draw-next" class="text-button">换一题 <span aria-hidden="true">↻</span></button></div>
           <button id="undo" class="text-button undo" hidden>撤销本题的完成标记</button>
         </div>
@@ -78,7 +86,7 @@
       <aside class="side-column" aria-label="学习节奏与总结提示">
         <section class="rhythm-panel" aria-labelledby="rhythm-heading">
           <h2 id="rhythm-heading">这样用这 15 分钟</h2>
-          <ol class="rhythm"><li><span class="duration">2 分钟</span><div><strong>带着问题读</strong><p>先看问题，想想自己的理解。</p></div></li><li><span class="duration">10 分钟</span><div><strong>理解与对照</strong><p>读讲解和例子，也留意适用边界。</p></div></li><li><span class="duration">3 分钟</span><div><strong>单独记下想法</strong><p>合上内容，用自己的话归纳。</p></div></li></ol>
+          <ol class="rhythm"><li><span class="duration">2 分钟</span><div><strong>先读理论点</strong><p>先看问题，理解概念与适用边界。</p></div></li><li><span class="duration">10 分钟</span><div><strong>再看应用实践</strong><p>对照家庭情境，选一个可尝试的做法。</p></div></li><li><span class="duration">3 分钟</span><div><strong>单独记下想法</strong><p>合上内容，用自己的话归纳。</p></div></li></ol>
         </section>
 
         <section class="reflection-panel" aria-labelledby="reflection-heading">
@@ -100,9 +108,9 @@
     <p>每次从全部类别中随机抽一个未完成的知识点，直接阅读对应的原创讲解。换题不会算完成；一轮换题会尽量不重复。笔记在你自己的本子或应用里单独记录。</p>
     <h3>六类知识题库</h3><ul id="category-list" class="category-list"></ul>
     <h3>在 iPhone 上使用</h3><p>用 Safari 打开网址，可在分享菜单中选择“添加到主屏幕”。添加后，先联网打开一次，题库与文章缓存好后即可离线抽题、阅读；打开文末外部参考链接需要联网。</p>
-    <h3>关于文章</h3><p>每篇约 1500—2000 字，包含概念解释、生活例子、应用与边界，文末附参考来源。内容用于日常学习；心理学和家庭教育的讲解不用于个人诊断。文章不会根据你的个人资料生成或变化。</p>
+    <h3>关于文章</h3><p>每题分为“理论点”和“应用实践”两张卡片，以解释清楚为准，不设固定字数，附可核查参考来源。切换卡片不会重置计时，也不会自动完成；换题后从理论卡开始。内容用于日常学习；心理学和家庭教育的讲解不用于个人诊断。讲解依据公开理论与资料整理，资料的支持范围会注明。卡片为固定题库，不会根据个人资料生成或变化。正面管教中的框架会说明适用边界，日常建议应结合孩子的年龄、能力和情境调整。</p>
     <h3>关于计时</h3><p>切到笔记应用、或锁屏后，计时仍按经过的时间计算，返回页面时会更新。刷新或关闭页面会重置计时；到时不会发送系统通知。</p>
-    <h3>只在本机记住题号</h3><p>只保存你点过“已完成”的题目编号，不保存笔记、日期或用时，不上传完成标记。更换浏览器、清除网站数据或使用无痕模式，可能使标记丢失。Safari 与主屏幕图标可能有独立的存储，建议固定一个入口使用。</p>
+    <h3>只在本机记住题号</h3><p>同一知识点沿用旧题号，完成标记会保留；新增或实质重写的题目使用新题号。只保存你点过“已完成”的题目编号，不保存笔记、日期或用时，不上传完成标记。更换浏览器、清除网站数据或使用无痕模式，可能使标记丢失。Safari 与主屏幕图标可能有独立的存储，建议固定一个入口使用。</p>
     <div class="reset-zone"><p id="completed-count"></p><button id="reset-open" class="text-button">清除全部完成标记</button></div>
   </dialog>
 

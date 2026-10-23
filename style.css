@@ -48,3 +48,14 @@ dialog{width:min(560px,calc(100vw - 32px));max-height:calc(100dvh - 48px);paddin
   .timer-row .secondary{font-size:12px;padding:8px 12px}
   .takeaway{padding:20px}
 }
+
+/* Two study cards share the original reading surface; switching is a learning action. */
+.reading-card { scroll-margin-top: 24px; }
+.card-view-nav { display: flex; gap: 12px; margin: 26px 0 24px; flex-wrap: wrap; }
+.view-button { min-height: 44px; padding: 8px 16px; border: 1px solid var(--border); border-radius: 6px; background: transparent; color: var(--muted); font: inherit; cursor: pointer; transition: none; }
+.view-button[aria-pressed="true"] { background: var(--text); border-color: var(--text); color: var(--surface); }
+.reading-card-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 0 0 26px; }
+.reading-card-heading h3 { margin: 0; font-size: 24px; font-weight: 500; }
+.reading-card-heading span { color: var(--muted); font-variant-numeric: tabular-nums; }
+.card-switch { width: 100%; margin-top: 28px; min-height: 48px; }
+@media (max-width: 600px) { .card-view-nav { gap: 8px; } .view-button { flex: 1; padding-inline: 10px; } }

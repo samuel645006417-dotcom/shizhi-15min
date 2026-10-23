@@ -1,6 +1,6 @@
 'use strict';
-const CACHE = 'shizhi-static-v2-reading';
-const ASSETS = ['./', './index.html', './style.css', './app.js', './library.js', './articles.js', './manifest.webmanifest', './icon.svg', './instrument-sans.ttf', './apple-touch-icon.png', './icon-192.png', './icon-512.png'];
+const CACHE = 'shizhi-static-v3-family';
+const ASSETS = ['./', './index.html', './style.css?v=3.0.0-family', './app.js?v=3.0.0-family', './library.js?v=3.0.0-family', './articles.js?v=3.0.0-family', './manifest.webmanifest', './icon.svg', './instrument-sans.ttf', './apple-touch-icon.png', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
