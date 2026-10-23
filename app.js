@@ -173,8 +173,7 @@
       return node;
     });
     $('article-content').replaceChildren(...sections);
-    const length = [...article.theory, ...article.practice].reduce((sum, section) => sum + section.paragraphs.join('').replace(/\s/g, '').length, 0);
-    $('article-length').textContent = `双卡原创讲解 · 共约 ${Math.round(length / 100) * 100} 字`;
+    $('article-length').textContent = '双卡原创讲解 · 理论与实践';
     const isTheory = cardView === 'theory';
     $('reading-card-title').textContent = isTheory ? '理论点' : '应用实践';
     $('reading-card-position').textContent = isTheory ? '1 / 2' : '2 / 2';
